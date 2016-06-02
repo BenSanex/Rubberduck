@@ -6,32 +6,52 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+		<!-- Compressed JavaScript -->
+		<script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
   </head>
 
   <body>
-	  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  	<!-- Small Navigation -->
+		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+		  <a class="logo-small show-for-small-only" href="#"><img src="/assets/logo.png" /></a>
 		  <button class="menu-icon" type="button" data-toggle></button>
 		  <div class="title-bar-title">Menu</div>
 		</div>
 
-		<div class="top-bar" id="main-menu">
+		<!-- Medium-Up Navigation -->
+		<nav class="top-bar" id="nav-menu">
+		  <div class="logo-wrapper hide-for-small-only">
+		    <div class="logo">
+		      <img src="/assets/logo.png">
+		    </div>
+		  </div>
+
+		  <!-- Left Nav Section -->
 		  <div class="top-bar-left">
-		    <ul class="dropdown menu" data-dropdown-menu>
-		      <li class="menu-text">Rubberduck</li>
+		    <ul class="vertical medium-horizontal menu">
+		      <li><a href="#">Rubberduck</a></li>
 		    </ul>
 		  </div>
+
+		  <!-- Right Nav Section -->
 		  <div class="top-bar-right">
-		    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-		    	<% if current_user && current_user.is_mentor %>
-		     		 <li><%= link_to 'Logout', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>
-		      	<% else %>
-		     		 <li><%= link_to 'Logout', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>	
-		     	<% end %>
+
+		    <ul class="vertical medium-horizontal menu">
+		    	
+		     		 <li><%= link_to 'Student Logout!!!!!', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>
+		      	
+		     		 <li><%= link_to 'Mentor Logout!!!!!!', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>	
+		     	
+
 		    </ul>
 		  </div>
-		</div>
+		</nav>
 
     <%= yield %>
-    
+
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>

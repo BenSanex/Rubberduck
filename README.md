@@ -8,6 +8,7 @@
 - Redis
 - Devise
 - Foundation
+- Sass
 
 ### Team
 - Denny Jovic
