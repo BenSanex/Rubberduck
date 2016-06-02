@@ -40,9 +40,9 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.timestamps null: false
     end
 
-    add_index :fucktestings, :email,                unique: true
-    add_index :fucktestings, :reset_password_token, unique: true
-    # add_index :fucktestings, :confirmation_token,   unique: true
-    # add_index :fucktestings, :unlock_token,         unique: true
+    add_index :users, :email,                unique: true
+    add_index :users, :reset_password_token, unique: true
+    # add_index :users, :confirmation_token,   unique: true
+    # add_index :users, :unlock_token,         unique: true
   end
 end
