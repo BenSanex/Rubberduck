@@ -22,7 +22,11 @@
 		  </div>
 		  <div class="top-bar-right">
 		    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-		      <li><a href="#">Logout</a></li>
+		    	<% if current_user && current_user.is_mentor %>
+		     		 <li><%= link_to 'Logout', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>
+		      	<% else %>
+		     		 <li><%= link_to 'Logout', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>	
+		     	<% end %>
 		    </ul>
 		  </div>
 		</div>
