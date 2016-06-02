@@ -1,4 +1,13 @@
-<div>
-	<div></div>
-	<div></div>
-</div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p>Register to get started learning.</p>
+      <p>
+        <%= link_to 'New Student Register', new_student_registration_path, class: 'btn btn-primary btn-lg' %>
+      </p><br>
+        <p>Register to get started teaching.</p>
+      <p>
+        <%= link_to 'New Mentor Register', new_mentor_registration_path, class: 'btn btn-primary btn-lg' %>
+      </p>
+    </div>
+  </div>

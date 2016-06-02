@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160602202822) do
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "avatar"
+    t.boolean  "is_mentor"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "reset_password_token"
