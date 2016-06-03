@@ -31,6 +31,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
   <div class="field">
+    <%= f.label :avatar_url %><br />
+    <%= f.text_field :avatar, autocomplete: "off" %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :Mentor? %><br />
     <%= f.check_box :is_mentor %>
   </div>
