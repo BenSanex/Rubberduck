@@ -1,6 +1,6 @@
 $global-radius: 4px;
 
-$primary-color: #1B99D3;
+$primary-color: #1b99d3;
 
 .image-centering {
   float: left;
@@ -8,7 +8,7 @@ $primary-color: #1B99D3;
 }
 
 .image-wrapper {
-	background-color: $primary-color;
+	background-color: #1b99d3;
   width: 300px;
   height: 300px;
   overflow: hidden;
@@ -25,6 +25,10 @@ $primary-color: #1B99D3;
   top: 0;
   left: 0;
   border-radius: $global-radius;
+}
+
+body {
+	background-color: white;
 }
 
 // modifier classes

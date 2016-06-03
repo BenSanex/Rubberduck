@@ -13,14 +13,14 @@
 
   <body>
   	<!-- Small Navigation -->
-		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+		<div class="title-bar new-title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
 		  <a class="logo-small show-for-small-only" href="#"><img src="/assets/logo.png" /></a>
 		  <button class="menu-icon" type="button" data-toggle></button>
 		  <div class="title-bar-title">Menu</div>
 		</div>
 
 		<!-- Medium-Up Navigation -->
-		<nav class="top-bar" id="nav-menu">
+		<nav class="top-bar new-top-bar" id="nav-menu">
 		  <div class="logo-wrapper hide-for-small-only">
 		    <div class="logo">
 		      <img src="/assets/logo.png">
@@ -30,15 +30,15 @@
 		  <!-- Left Nav Section -->
 		  <div class="top-bar-left">
 		    <ul class="vertical medium-horizontal menu">
-		      <li><a href="#">Rubberduck</a></li>
+		      <li><a href="#" class="new-button">Rubberduck</a></li>
 		    </ul>
 		  </div>
 
 		  <!-- Right Nav Section -->
 		  <div class="top-bar-right">
 		    <ul class="vertical medium-horizontal menu">
-		     	<li><%= link_to 'Student Logout!!!!!', destroy_student_session_path, class: 'btn btn-primary btn-lg' %></li>
-		     	<li><%= link_to 'Mentor Logout!!!!!!', destroy_mentor_session_path, class: 'btn btn-primary btn-lg' %></li>	
+		     	<li><%= link_to 'Student Logout!!!!!', destroy_student_session_path, class: 'btn btn-primary btn-lg new-button' %></li>
+		     	<li><%= link_to 'Mentor Logout!!!!!!', destroy_mentor_session_path, class: 'btn btn-primary btn-lg new-button' %></li>	
 		    </ul>
 		  </div>
 
