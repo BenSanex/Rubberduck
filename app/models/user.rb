@@ -4,4 +4,8 @@ class User < ApplicationRecord
 	has_many :skills, through: :expertises 
 	has_many :questions, as: :mentor, foreign_key: "mentor_id"
 	has_many :questions, as: :student, foreign_key: "student_id"
+
+	def mentor_rating
+		self.questions.ratings
+	end
 end
