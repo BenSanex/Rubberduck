@@ -2,6 +2,11 @@ class RegistrationsController < Devise::RegistrationsController
   protected
 
   def after_sign_up_path_for(resource)
-    '/an/example/path' # Or :prefix_to_your_route
+    @user = current_user
+    if @user.is_mentor
+    	"/mentors/#{@user.id}"
+	else
+		"/students/#{@user.id}"
+	end
   end
 end
