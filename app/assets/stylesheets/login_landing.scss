@@ -111,3 +111,22 @@
   font-size: 0.35em;
   color: white;
 }
+
+.student-name,
+.mentor-name {
+  text-align: center;
+  position: relative;
+  top: 35%;
+  font-size: 4vw;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.student-hover,
+.mentor-hover {
+  display: none;
+  text-align: center;
+  position: relative;
+  top: 35%;
+  font-size: 4vw;
+  font-family: 'Hammersmith One', sans-serif;
+}
