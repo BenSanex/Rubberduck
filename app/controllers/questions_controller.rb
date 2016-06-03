@@ -1,7 +1,7 @@
-class StudentsController < ApplicationController
-  def new
+class QuestionsController < ApplicationController
+ 
+  def show
+  	@user = User.find(current_user.id)
   end
 
-  def create
-  end
 end
