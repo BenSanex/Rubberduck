@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :questions, only: [:show]
   resources :students, only: [:new, :create, :show]
   resources :mentors, only: [:new, :create, :show]
-
+  resources :questions
   root 'welcome#index'
 
 end

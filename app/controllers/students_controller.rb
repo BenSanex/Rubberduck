@@ -4,6 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @question = Question.new
   	@user = User.find(current_user.id)
   end
 
