@@ -1,0 +1,28 @@
+<div class="tagline">
+  Real problems, Real solutions
+  <div class="sub-tag">We're creating stronger developers one problem at a time</div>
+</div>
+<div class="left-side">
+  <div class="student-square">
+    <% if @user%>
+      <p><%= link_to 'Login', student_path(@user.id) %></p>
+    <% else %>
+      <p><%= link_to 'Login', new_user_session_path %></p>
+    <% end %>
+  </div>
+  <div class="student-register">
+    <%= link_to 'Student Registration', new_user_registration_path %>
+  </div>
+</div>
+<div class="right-side">
+  <div class="mentor-square">
+    <% if current_user %>
+      <p><%= link_to 'Login', mentor_path(@user.id) %></p> 
+    <% else %>
+      <p><%= link_to 'Login', new_user_session_path %></p>
+    <% end %>
+  </div>
+  <div class="mentor-register">
+    <%= link_to 'Mentor Registration', new_user_registration_path %>
+  </div>
+</div>
