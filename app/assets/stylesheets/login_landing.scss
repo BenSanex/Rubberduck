@@ -88,11 +88,14 @@
   margin: auto;
   top: 292px;
   border-radius: 4px;
+  transition-duration: 0.3s;
 }
 
 .student-square:hover,
 .mentor-square:hover {
   background: white;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .tagline {
@@ -110,4 +113,23 @@
 .sub-tag {
   font-size: 0.35em;
   color: white;
+}
+
+.student-name,
+.mentor-name {
+  text-align: center;
+  position: relative;
+  top: 35%;
+  font-size: 4vw;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.student-hover,
+.mentor-hover {
+  display: none;
+  text-align: center;
+  position: relative;
+  top: 35%;
+  font-size: 4vw;
+  font-family: 'Hammersmith One', sans-serif;
 }
