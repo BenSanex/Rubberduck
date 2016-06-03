@@ -11,6 +11,11 @@ $(document).ready(function(){
 		$(".student-name").stop(true, true).fadeIn(100);
 	});
 
+	// $(".student-square").on("click", function(event){
+	// 	event.preventDefault();
+	// 	$(".login-form").show();
+	// });
+
 	$(".mentor-square").on("mouseenter", function(){
 		$(".mentor-name").stop(true, true).hide();
 		$(".mentor-hover").stop(true, true).fadeIn(100);
