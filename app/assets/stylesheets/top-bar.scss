@@ -13,6 +13,14 @@ $logo-margin: - ($logo-width / 2);
   width: $logo-width;
 }
 
+.new-top-bar {
+  background-color: #2d4753;
+}
+
+.new-title-bar {
+  background-color: #2d4753;
+}
+
 .title-bar {
   padding: 0 .5rem;
 }
@@ -21,6 +29,10 @@ $logo-margin: - ($logo-width / 2);
 .title-bar-title {
   position: relative;
   top: 10px;
+}
+
+.new-button {
+  background-color: #2d4753;
 }
 
 /* Medium-Up Navigation */

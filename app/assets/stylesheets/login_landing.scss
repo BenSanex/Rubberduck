@@ -1,0 +1,101 @@
+$global-radius: 4px;
+
+$primary-color: #1b99d3;
+
+.image-centering {
+  float: left;
+  margin: 8.33%;
+}
+
+.image-wrapper {
+	background-color: #1b99d3;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-radius: $global-radius;
+}
+
+.image-overlay-content {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border-radius: $global-radius;
+}
+
+body {
+	background-color: white;
+}
+
+// modifier classes
+
+.overlay-fade-in {
+  
+  p {
+    letter-spacing: 0.15em;
+    color: #f4f4f4;
+    font-size: 15px;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  
+  img {
+    transition: all 0.2s linear;
+  }
+  
+  .image-overlay-content {
+    opacity: 0;
+    background-color: #2d4753;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  h2 {
+    color: #f2f2f2;
+    font-size: 1.8rem;
+    margin-top: 40%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px; 
+    background: #FFF;
+    color: #222;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    position: relative;
+    border: 1px solid #999;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      box-shadow: 0 0 5px #000;
+    }
+  }
+  
+  &:hover img {
+    transform: scale(1.2);
+  }
+  
+  &:hover .image-overlay-content {
+    opacity: 1;
+  }
+  
+  &:hover h2, p, .button {
+    opacity: 1;
+  }
+  
+  &:hover p {
+    transition-delay: 0.1s;
+  }
+  
+  &:hover .button {
+    transition-delay: 0.2s;
+  }
+} 
