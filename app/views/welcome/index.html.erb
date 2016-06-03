@@ -1,13 +1,20 @@
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Register to get started learning.</p>
-      <p>
-        <%= link_to 'New Student Register', new_student_registration_path, class: 'btn btn-primary btn-lg' %>
-      </p><br>
-        <p>Register to get started teaching.</p>
-      <p>
-        <%= link_to 'New Mentor Register', new_mentor_registration_path, class: 'btn btn-primary btn-lg' %>
-      </p>
+<div class="row">
+  <div class="small-4 image-centering">
+    <div class="image-wrapper overlay-fade-in">
+      <div class="image-overlay-content">
+        <h2>Student</h2>
+        <p class="price"><%= link_to 'Login', new_student_registration_path %></p>
+      </div>
     </div>
+    <%= link_to 'Student Registration', new_student_registration_path, class: 'btn btn-primary btn-lg' %>
   </div>
+  <div class="small-4 image-centering">
+    <div class="image-wrapper overlay-fade-in">
+      <div class="image-overlay-content">
+        <h2>Mentor</h2>
+        <p class="price"><%= link_to 'Login', new_mentor_registration_path %></p>
+      </div>
+    </div>
+    <%= link_to 'Mentor Registration', new_mentor_registration_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+</div>
