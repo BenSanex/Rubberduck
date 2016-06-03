@@ -34,7 +34,6 @@ end
 	Question.create(
 		student_id: rand(6..10),
 		mentor_id: rand(1..5),
-		rating_id: rating.id,
 		skills_id: 1,
 		title: Faker::Lorem.sentence,
 		content: Faker::Lorem.paragraph,
