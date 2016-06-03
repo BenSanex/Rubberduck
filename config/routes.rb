@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :questions
   root 'welcome#index'
 
+  mount ActionCable.server => '/cable'
 end
