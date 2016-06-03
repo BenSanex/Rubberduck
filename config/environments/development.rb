@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-
+  config.secret_key_base = ENV['bd3c75eb3bc69b17665749e91085f76c8e4d5cfffcec6cb7c5a2827a5f870ca35955f3f2b722485a284a2fe7bebbda83eb1bf180f4c94e552e65ef79b5f0d609']
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
