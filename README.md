@@ -4,10 +4,10 @@
 ## Technical
 ### Programs Used
 - Rails 5
+- Action Cable
 - jQuery
 - Redis
-- Devise
-- Foundation
+- Bootstrap
 - Sass
 
 ### Team
