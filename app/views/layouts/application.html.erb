@@ -8,32 +8,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <!-- FAVICON -->
-		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 
-		<!-- FONT AWESOME -->
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- FONTS -->
-		<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
 
-		<!-- BOOTSTRAP -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   </head>
 
   <body class=>
-  	<div class="container">
-  		<div class="top-nav span">
-	  		<div class="nav-container col-lg-12">
-	  			<div class="company-name"></div>
-	  			<div class="logo"></div>
-	  		</div>
-	  	</div>
-  	</div>
-    <%= link_to 'Logout!!!!!', destroy_user_session_path, :method => :delete %>
-    <%= yield %>
+    <div class="container">
+      <div class="top-nav span">
+        <div class="nav-container col-lg-12">
+          <div class="company-name"></div>
+          <div class="logo"></div>
+        </div>
+      </div>
+    </div>
 
+    <%= yield %>
 
   </body>
 </html>

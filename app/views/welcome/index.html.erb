@@ -18,20 +18,18 @@
           <div class="role-name">Student</div>
           <div class="role-hover">Login</div>
         </div>
-      </div>
-      <% end %>
-    <% else %>
-      <%= link_to sessions_new_path do %>
-      <div class="student-square">
-        <div class="student-name">Student</div>
-        <div class="student-hover">
-          <p>Login</p>
+        <% end %>
+      <% else %>
+        <%= link_to sessions_new_path, class: "login-link" do %>
+        <div class="role-square">
+          <div class="role-name">Student</div>
+          <div class="role-hover">Login</div>
         </div>
         <% end %>
       <% end %>
-    <% end %>
-    <div class="student-register">
-      <%= link_to 'Student Registration', new_user_path %>
+      <div class="role-register">
+        <p><%= link_to 'Student Registration', new_user_path %></p>
+      </div>
     </div>
 
     <div class="col-lg-6 right-side">
@@ -41,21 +39,18 @@
           <div class="role-name">Mentor</div>
           <div class="role-hover">Login</div>
         </div>
-      </div>
-      <% end %>
-    <% else %>
-      <%= link_to sessions_new_path do %>
-      <div class="mentor-square">
-        <div class="mentor-name">Mentor</div>
-          <div class="mentor-hover">
-            <p>Login</p> 
-          </div>
+        <% end %>
+      <% else %>
+        <%= link_to sessions_new_path, class: "login-link" do %>
+        <div class="role-square">
+          <div class="role-name">Mentor</div>
+          <div class="role-hover">Login</div>
         </div>
         <% end %>
       <% end %>
-    <% end %>
-    <div class="mentor-register">
-      <%= link_to 'Mentor Registration', new_user_path %>
+      <div class="role-register">
+        <p><%= link_to 'Mentor Registration', new_user_path %></p>
+      </div>
     </div>
 
   </div>

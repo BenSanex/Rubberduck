@@ -15,8 +15,8 @@ class QuestionsController < ApplicationController
         title: @question.title,
         skill: @question.skill.sub_type,
         tag: @question.tag,
-        codeshare_url: @question.codeshare_url
-      head :ok
+        url: @question.id
+      # head :ok
     end
   end
 
