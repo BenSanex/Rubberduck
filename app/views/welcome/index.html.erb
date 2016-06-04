@@ -16,7 +16,7 @@
       </div>
       <% end %>
     <% else %>
-      <%= link_to new_user_session_path do %>
+      <%= link_to sessions_new_path do %>
       <div class="student-square">
         <div class="student-name">Student</div>
         <div class="student-hover">
@@ -26,7 +26,7 @@
       <% end %>
     <% end %>
     <div class="student-register">
-      <%= link_to 'Student Registration', new_user_registration_path %>
+      <%= link_to 'Student Registration', new_user_path %>
     </div>
   </div>
 
@@ -42,7 +42,7 @@
       </div>
       <% end %>
     <% else %>
-      <%= link_to new_user_session_path do %>
+      <%= link_to sessions_new_path do %>
       <div class="mentor-square">
         <div class="mentor-name">Mentor</div>
           <div class="mentor-hover">
@@ -53,7 +53,7 @@
       <% end %>
     <% end %>
     <div class="mentor-register">
-      <%= link_to 'Mentor Registration', new_user_registration_path %>
+      <%= link_to 'Mentor Registration', new_user_path %>
     </div>
   </div>
   
