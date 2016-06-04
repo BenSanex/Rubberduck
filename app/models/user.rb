@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-	attr_reader :email, :full_name, :username, :avatar, :is_mentor
+	attr_accessor :email, :full_name, :username, :avatar, :is_mentor
 	devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 	has_many :expertises, foreign_key: :mentor_id
 	has_many :skills, through: :expertises 
