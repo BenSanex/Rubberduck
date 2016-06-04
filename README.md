@@ -9,6 +9,7 @@
 - Redis
 - Bootstrap
 - Sass
+- Twilio
 
 ### Team
 - Denny Jovic
