@@ -11,7 +11,9 @@ class QuestionsController < ApplicationController
     if @question.save
       ActionCable.server.broadcast 'questions',
         content: @question.content,
-        title: @question.title
+        title: @question.title,
+        skill: @question.skill.sub_type,
+        tag: @question.tag
       head :ok
     end
   end
@@ -19,7 +21,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:content, :title)
+    params.require(:question).permit(:content, :title, :skill_id, :tag)
   end
 
 end
