@@ -8,6 +8,7 @@ class CreateQuestions < ActiveRecord::Migration[5.0]
     	t.string :content
     	t.string :tag
     	t.boolean :solved?
+      t.string :codeshare_url
 
       t.timestamps
     end

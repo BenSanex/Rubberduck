@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(version: 20160602202822) do
     t.string   "content"
     t.string   "tag"
     t.boolean  "solved?"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "codeshare_url"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "ratings", force: :cascade do |t|

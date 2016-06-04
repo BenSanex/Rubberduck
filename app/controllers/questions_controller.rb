@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @question = Question.find(params[:id])
   	@user = User.find(current_user.id)
   end
 
@@ -13,7 +14,8 @@ class QuestionsController < ApplicationController
         content: @question.content,
         title: @question.title,
         skill: @question.skill.sub_type,
-        tag: @question.tag
+        tag: @question.tag,
+        codeshare_url: @question.codeshare_url
       head :ok
     end
   end
