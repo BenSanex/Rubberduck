@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   	  @user = current_user
     if @user.is_mentor
     	"/mentors/#{@user.id}"
-	else
-		"/students/#{@user.id}"
-	end
+	  else
+		  "/students/#{@user.id}"
+	  end
   end
 end
