@@ -1,0 +1,70 @@
+<div class="mentor-stars">
+	Rating: <%= user.rating %> / 5
+	<% if user.rating == 5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+	<% elsif user.rating >= 4.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 4 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 3.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 3 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 2.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 2 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 1.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 1 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif user.rating >= 0.5 %>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% else %>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% end %>
+</div>
