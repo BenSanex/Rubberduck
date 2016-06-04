@@ -16,7 +16,7 @@ class QuestionsController < ApplicationController
         skill: @question.skill.sub_type,
         tag: @question.tag,
         url: @question.id
-      # head :ok
+      head :ok
     end
   end
 
