@@ -1,0 +1,16 @@
+<%= form_for @question do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, data: {textfield: "message"}%>
+
+  <%= f.label :tag %>
+  <%= f.text_field :tag, data: {textfield: "message"}%>
+
+  <%= f.label :skill_id %>
+  <%= f.collection_select(:skill_id, Skill.all, :id, :sub_type)%>
+
+  <%= f.label :content %>
+  <%= f.text_area :content, data: {send: "message"}%>
+
+  <%= f.submit "Ask" %>
+<% end %>
+
