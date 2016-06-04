@@ -71,22 +71,22 @@ a:hover {
 
 /* MENTOR PAGE */
 .avatar-container {
-  width: 20%;
+  transform: scale(0.15);
   margin: auto;
+  right: 850px;
+  position: absolute;
 }
 
 .avatar-image {
   border-radius: 50%;
   position: absolute;
+  padding: 75px
 }
 
 .avatar-border {
   border-radius: 50%;
   position: absolute;
-  width: 30%;
   z-index: 1;
-  left: 500px;
-  top: 50px;
 }
 
 /* LOGIN */
@@ -174,3 +174,19 @@ a:hover {
     top: 10px
   }
 }
+
+/* STUDENT PAGE */
+li {
+  list-style-type: none;
+}
+
+.question-container {
+  background-color: yellow;
+  width: 40%;
+  margin: auto;
+}
+
+.question-title {
+  font-size: 2em;
+}
+

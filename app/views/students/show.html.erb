@@ -1,3 +1,15 @@
 <%= @user.username %>
 
 <%= render '/questions/question_form' %>
+
+<ul>
+	<% @questions.each do |question| %>
+	<div class="question-container">
+		<li class="question-title"><%= question.title %></li>
+		<li><%= render partial: "shared/mentor_portrait", locals: {user: question.mentor} %></li>
+		<li>Mentor: <%= question.mentor.full_name %></li>
+		<li><%= render partial: "shared/star_rating", locals: {user: question.mentor} %></li>
+		<li>Asked <%= time_ago_in_words(question.created_at) %> ago</li><br>
+	</div>
+	<% end %>
+</ul>
