@@ -28,10 +28,7 @@ end
 end
 
 50.times do
-	rating = Rating.create(
-		number: rand(1..5)
-	)
-	Question.create(
+	question = Question.create(
 		student_id: rand(6..10),
 		mentor_id: rand(1..5),
 		skills_id: 1,
@@ -39,6 +36,10 @@ end
 		content: Faker::Lorem.paragraph,
 		solved?: true,
 		tag: "hi"
+	)
+	Rating.create(
+		number: rand(1..5),
+		question_id: question.id
 	)
 end
 

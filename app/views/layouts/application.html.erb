@@ -7,8 +7,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <!-- FAVICON -->
 		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+		<!-- FONT AWESOME -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- FONTS -->
 		<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
 
@@ -20,11 +25,9 @@
   		<div class="logo"></div>
   	</div>
 
-		<div class="background-image">
 
     <%= yield %>
 
-    </div>
     <%= link_to 'Logout!!!!!', destroy_user_session_path, :method => :delete %>
   </body>
 </html>

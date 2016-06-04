@@ -1,17 +1,81 @@
-
-
 <div class="avatar-container">
 	<img src="/assets/avatar_border_01.png" class="avatar-border">
 		<img src="<%= @user.avatar %>" class="avatar-image"></img>
 	</img>
 </div>
-<div class="mentor-stars">
 
+<div class="mentor-stars">
+	Rating: <%= @rating %> / 5
+	<% if @rating == 5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+	<% elsif @rating >= 4.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+	<% elsif @rating >= 4 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 3.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 3 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 2.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 2 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 1.5 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 1 %>
+		<p class="fa fa-star" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% elsif @rating >= 0.5 %>
+		<p class="fa fa-star-half-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% else %>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+		<p class="fa fa-star-o" aria-hidden="true"></p>
+	<% end %>
 </div>
 
 Hi, <%= @user.username %>. You're probably the best mentor around.
-
-<%= @ratings.count %>
 
 <div class="notifications"></div>
 
