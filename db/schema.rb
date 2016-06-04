@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160602202822) do
 
   create_table "expertises", force: :cascade do |t|
     t.integer  "mentor_id"
-    t.integer  "skills_id"
+    t.integer  "skill_id"
     t.integer  "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160602202822) do
   create_table "questions", force: :cascade do |t|
     t.integer  "student_id"
     t.integer  "mentor_id"
-    t.integer  "skills_id"
+    t.integer  "skill_id"
     t.string   "title"
     t.string   "content"
     t.string   "tag"

@@ -14,7 +14,7 @@ User.create(
 	is_mentor: true
 )
 
-5.times do 
+5.times do
 	mentor = User.create(
 		full_name: Faker::Name.name,
 		username: Faker::Beer.hop,
@@ -25,12 +25,12 @@ User.create(
 	)
 	Expertise.create(
 		mentor_id: mentor.id,
-		skills_id: 1,
+		skill_id: 1,
 		level: rand(1..5)
 	)
 end
 
-5.times do 
+5.times do
 	User.create(
 		full_name: Faker::Name.name,
 		username: Faker::Beer.hop,
@@ -45,7 +45,7 @@ end
 	question = Question.create(
 		student_id: rand(7..11),
 		mentor_id: rand(1..6),
-		skills_id: 1,
+		skill_id: 1,
 		title: Faker::Lorem.sentence,
 		content: Faker::Lorem.paragraph,
 		solved?: true,

@@ -14,7 +14,6 @@ class MentorsController < ApplicationController
     	@rating = rating.round(1)
     end
   	## Find Skill
-  	
   end
 
 end

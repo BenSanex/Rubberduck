@@ -1,0 +1,9 @@
+<div class="avatar-container">
+	<% if user.rating >= 3 %>
+	<img src="/assets/avatar_border.png" class="avatar-border">
+	<% else %>
+	<img src="/assets/avatar_border_01.png" class="avatar-border">
+	<% end %>
+		<img src="<%= user.avatar %>" class="avatar-image"></img>
+	</img>
+</div>

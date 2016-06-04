@@ -1,81 +1,6 @@
-<div class="avatar-container">
-	<img src="/assets/avatar_border_01.png" class="avatar-border">
-		<img src="<%= @user.avatar %>" class="avatar-image"></img>
-	</img>
-</div>
+<%= render partial: "shared/mentor_portrait", locals: {user: @user} %>
+<%= render partial: "shared/star_rating", locals: {user: @user} %>
 
-<div class="mentor-stars">
-	Rating: <%= @rating %> / 
-	<% if @rating %>
-		<% if @rating == 5 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-		<% elsif @rating >= 4.5 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-half-o" aria-hidden="true"></p>
-		<% elsif @rating >= 4 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 3.5 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-half-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 3 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 2.5 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-half-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 2 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 1.5 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-half-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 1 %>
-			<p class="fa fa-star" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% elsif @rating >= 0.5 %>
-			<p class="fa fa-star-half-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% else %>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-			<p class="fa fa-star-o" aria-hidden="true"></p>
-		<% end %>
-	<% end %>
-</div>
 
 Hi, <%= @user.username %>. You're probably the best mentor around.
 
@@ -84,3 +9,4 @@ Hi, <%= @user.username %>. You're probably the best mentor around.
 
 <a href="https://images.rapgenius.com/9908cb640cf00bd6689bd2aee22f0a9d.768x506x1.jpg" class="lightbox_trigger">Lightbox Practice
 </a>
+s
