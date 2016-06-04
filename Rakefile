@@ -4,3 +4,9 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+
+desc 'Fuck it. Try again.'
+task "db:yolo" => [:"db:drop", :"db:create", :"db:migrate"] do
+  puts "YOLO MOFOS"
+end
