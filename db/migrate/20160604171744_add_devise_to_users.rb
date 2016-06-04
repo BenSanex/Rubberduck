@@ -1,13 +1,7 @@
-class CreateUsers < ActiveRecord::Migration[5.0]
-  def change
-    create_table :users do |t|
-    	t.string :full_name
-    	t.string :username
-    	t.string :email
-    	t.string :encrypted_password
-    	t.string :avatar
-      t.boolean :is_mentor
-
+class AddDeviseToUsers < ActiveRecord::Migration[5.0]
+  def self.up
+    change_table :users do |t|
+      ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
@@ -43,7 +37,13 @@ class CreateUsers < ActiveRecord::Migration[5.0]
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
+    # add_index :users, :confirmation_token,   unique: true
+    # add_index :users, :unlock_token,         unique: true
+  end
 
+  def self.down
+    # By default, we don't want to make any assumption about how to roll back a migration when your
+    # model already existed. Please edit below which fields you would like to remove in this migration.
+    raise ActiveRecord::IrreversibleMigration
   end
 end
-
