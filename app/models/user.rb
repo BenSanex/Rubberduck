@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-	attr_accessor :email, :full_name, :username, :avatar, :is_mentor
-	attr_protected :encrypted_password
+	attr_accessor :email, :full_name, :username, :avatar, :is_mentor, :encrypted_password
 	devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 	has_many :expertises, foreign_key: :mentor_id
 	has_many :skills, through: :expertises 
