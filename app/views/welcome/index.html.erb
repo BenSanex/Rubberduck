@@ -10,7 +10,6 @@
   </div>
 
   <div class="span">
-
     <div class="col-lg-6 left-side">
       <% if @user %>
         <%= link_to student_path(@user.id), class: "login-link" do %>
@@ -28,8 +27,11 @@
           <p>Login</p>
         </div>
         <% end %>
+      </div>
       <% end %>
     <% end %>
+    </div>
+
     <div class="student-register">
       <%= link_to 'Student Registration', new_user_path %>
     </div>
@@ -53,10 +55,8 @@
         </div>
       <% end %>
     <% end %>
+   
     <div class="mentor-register">
       <%= link_to 'Mentor Registration', new_user_path %>
     </div>
-
-  </div>
-
 </div>
