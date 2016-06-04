@@ -9,8 +9,12 @@ class User < ApplicationRecord
 		questions = Question.where(mentor_id: self.id)
 	  	all_ratings = questions.map{ |question| question.rating }
 	  	rating_total = all_ratings.map {|rating| rating.number.to_f }
-	  	rating  = rating_total.inject(0){|sum,x| sum + x } / rating_total.length
-	  	return rating.round(1)
+	  	if rating_total.length > 0
+	  		rating  = rating_total.inject(0){|sum,x| sum + x } / rating_total.length
+	  		return rating.round(1)
+	  	else
+	  		return 0
+	  	end
 	end
 
 
