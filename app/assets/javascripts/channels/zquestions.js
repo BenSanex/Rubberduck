@@ -7,7 +7,6 @@ App.questions = App.cable.subscriptions.create('MessagesChannel', {
     })
   },
   renderMessage: function(data) {
-      return "<div id='lightbox'><p>Click to close</p><div id='content'><h3>"+data.title+"</h3><h4>"+data.content+"</h4></div></div>"
-
+      return "<div id='lightbox'><p>Click to close</p><div id='content'><h3>"+data.title+"</h3><h4>"+data.content+"</h4><a href='/questions/"+data.url+"'>Enter the classroom!</a></div></div>"
   }
 });
