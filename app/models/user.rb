@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-	attr_accessor :email
+	attr_accessor :email, :full_name
 	devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 	has_many :expertises, foreign_key: :mentor_id
 	has_many :skills, through: :expertises 
