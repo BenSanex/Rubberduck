@@ -1,18 +1,17 @@
 
 
-
-
-
 <div class="avatar-container">
 	<img src="/assets/avatar_border_01.png" class="avatar-border">
 		<img src="<%= @user.avatar %>" class="avatar-image"></img>
 	</img>
 </div>
 <div class="mentor-stars">
-	
+
 </div>
 
 Hi, <%= @user.username %>. You're probably the best mentor around.
+
+<%= @ratings.count %>
 
 <div class="notifications"></div>
 
