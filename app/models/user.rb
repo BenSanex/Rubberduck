@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   	has_secure_password
-  	attr_accessor :full_name, :username, :avatar, :is_mentor, :password, :email
+  	attr_accessor :full_name, :username, :avatar, :is_mentor, :password_digest, :email
 	has_many :expertises, foreign_key: :mentor_id
 	has_many :skills, through: :expertises 
 	has_many :asked_questions, class_name: "Question", foreign_key: :student_id
