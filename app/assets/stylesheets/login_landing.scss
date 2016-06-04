@@ -138,3 +138,46 @@ a:hover {
   font-size: 0.35em;
   color: white;
 }
+
+
+.student-register {
+  background-color: black;
+  width: 30%;
+  margin: auto;
+  position: relative;
+  height: 5%;
+  border-radius: 4px;
+  top: 35%;
+  text-align: center;
+  padding-top: 1.5%;
+}
+
+.mentor-register {
+  background-color: black;
+  width: 15%;
+  position: relative;
+  left: 25%;
+  height: 5%;
+  top: 70%;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.avatar-container {
+  width: 20%;
+  margin: auto;
+}
+
+.avatar-image {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.avatar-border {
+  border-radius: 50%;
+  position: absolute;
+  width: 30%;
+  z-index: 1;
+  left: 500px;
+  top: 50px;
+}
