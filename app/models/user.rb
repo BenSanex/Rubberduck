@@ -21,5 +21,9 @@ class User < ApplicationRecord
       end
 	end
 
+  def level
+    questions = self.proposed_questions
+    questions.length / 10
+  end
 
 end
