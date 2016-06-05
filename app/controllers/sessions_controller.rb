@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         redirect_to student_path(@user)
       end
     else
-      render sessions_new_path
+      render login_path
     end
   end
 

@@ -8,8 +8,7 @@ class StudentsController < ApplicationController
     @question = Question.new
   	@user = User.find(current_user.id)
 
-  	questions = Question.where(student_id: @user.id)
-  	@questions = questions.sort{|a,b| b.id <=> a.id}
+    @questions = @user.asked_questions.where('created_at >= ?', 14.days.ago)
   end
 
 end
