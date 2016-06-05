@@ -16,7 +16,7 @@ a:hover {
 }
 
 .background-image {
-  background: url(../assets/background.jpg);
+  background: image-url("../assets/background.jpg");
   height: 790px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -149,7 +149,7 @@ a:hover {
 
 @media screen and (min-width: 1200px) {
   .background-image {
-      
+
   }
 }
 
