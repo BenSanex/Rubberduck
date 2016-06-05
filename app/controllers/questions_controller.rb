@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
     puts @question
     if @user.is_mentor
       @question.update(solved?: true, mentor_id: @user.id)
-      redirect_to @user
+      redirect_to mentor_path(@user)
     else
       @question.update(solved?: true)
       redirect_to @user
