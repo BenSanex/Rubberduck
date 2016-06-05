@@ -20,6 +20,16 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def update
+    @user = current_user
+    @question = Question.find(params[:question_id])
+    puts @question
+    if @question.update(solved?: true)
+      redirect_to @user
+    end
+  end
+
+
   private
 
   def question_params
