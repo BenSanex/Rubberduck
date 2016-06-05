@@ -15,7 +15,6 @@ class MentorsController < ApplicationController
         else
           rating = 0
         end
-      end
     	rating  = rating_total.inject(0){|sum,x| sum + x } / rating_total.length
     	@rating = rating.round(1)
       end
