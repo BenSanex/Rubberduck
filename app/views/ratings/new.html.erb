@@ -1,0 +1,8 @@
+<div class="container">
+	<h1>How was your session?</h1>
+	<h3>Please rate your experience below</h3>
+	<p><%= @question.title %></p>
+
+	<%= render partial: "rating_form", locals: {rating: @rating} %>
+</div>
+

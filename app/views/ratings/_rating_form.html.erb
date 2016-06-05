@@ -1,0 +1,14 @@
+<%= form_for(rating, url: question_ratings_path) do |f| %>
+  <%= f.label :number, "1" %>
+  <%= f.radio_button :number, '1', :checked => true %> 
+  <%= f.label :number, "2" %>
+  <%= f.radio_button :number, '2' %> 
+  <%= f.label :number, "3" %>
+  <%= f.radio_button :number, '3' %> 
+  <%= f.label :number, "4" %>
+  <%= f.radio_button :number, '4' %> 
+  <%= f.label :number, "5" %>
+  <%= f.radio_button :number, '5' %>
+
+  <%= f.submit "Rate" %>
+<% end %>
