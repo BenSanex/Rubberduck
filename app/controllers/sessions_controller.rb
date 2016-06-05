@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def new
     render "new"
@@ -14,7 +15,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def logout
+  def destroy
     session.clear
     redirect_to :root
   end
