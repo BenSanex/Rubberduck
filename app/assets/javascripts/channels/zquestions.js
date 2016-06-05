@@ -4,7 +4,7 @@ App.questions = App.cable.subscriptions.create('MessagesChannel', {
     $('#lightbox').show();
     $(document).on('click','#lightbox', function() {
       $('#lightbox').hide();
-    })
+    });
   },
   renderMessage: function(data) {
       return "<div id='lightbox'><p>Click to close</p><div id='content'><h3>"+data.title+"</h3><h4>"+data.content+"</h4><a href='/questions/"+data.url+"'>Enter the classroom!</a></div></div>"
