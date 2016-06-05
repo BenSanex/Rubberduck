@@ -1,16 +1,36 @@
-<%= form_for Question.new do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, data: {textfield: "message"}%>
+<h2> Ask a question: </h2>
 
-  <%= f.label :tag %>
-  <%= f.text_field :tag, data: {textfield: "message"}%>
+<div class="container form-container">
+  <%= form_for Question.new do |f| %>
 
-  <%= f.label :skill_id %>
-  <%= f.collection_select(:skill_id, Skill.all, :id, :sub_type)%>
-
-  <%= f.label :content %>
-  <%= f.text_area :content, data: {send: "message"}%>
-
-  <%= f.submit "Ask"%>
-<% end %>
-
+  <div class="form-group">
+    <%= f.label :title %>
+    <div class="col-sm-10">
+    <%= f.text_field :title, data: {textfield: "message"}%>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tag %>
+    <div class="col-sm-10">
+    <%= f.text_field :tag, data: {textfield: "message"}%>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :skill_id %>
+    <div class="col-sm-10">
+    <%= f.collection_select(:skill_id, Skill.all, :id, :sub_type)%>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <div class="col-sm-10">
+    <%= f.text_area :content, data: {send: "message"}%>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit "Ask"%>
+    </div>
+  </div>
+  <% end %>
+</div>
