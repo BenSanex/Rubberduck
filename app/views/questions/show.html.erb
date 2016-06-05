@@ -1,5 +1,5 @@
-<iframe src="<%=@question.codeshare_url%>" height="100%"></iframe>
+<p>
+	<%= button_to "End Session", new_question_rating_path(@question), method: :get %>
+</p>
 
-<div class="end-session">
-  <%= button_to "End Session", question_path(@question), method: :put, params: {question_id: @question.id} %>
-</div>
+<iframe src="<%= @question.codeshare_url %>" height="100%"></iframe>
