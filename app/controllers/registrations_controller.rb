@@ -3,6 +3,7 @@ class RegistrationsController < ApplicationController
 
   def new
     @user = User.new
+    render :'users/new'
   end
 
   def create

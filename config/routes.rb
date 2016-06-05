@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get '/signup', to: "registrations#new"
-  post '/signup', to: "registrations#create"
+  post '/signup', to: "registrations#create", as: 'new_user'
 
   get 'login', to: "sessions#new"
   post '/login', to: "sessions#create"

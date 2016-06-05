@@ -29,7 +29,7 @@
           <div class="company-name"></div>
           <div class="logo"></div>
           <% if logged_in? %>
-            <%= link_to "Logout", logout_path, method: get %>
+            <%= link_to "Logout", logout_path, action: 'destroy' %>
           <% end %>
         </div>
       </div>
