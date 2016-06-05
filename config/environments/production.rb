@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
   # config.secret_key_base = '14f98bbc3323bca4f7d842cc7a58095d551b2e63d379ae49169f205448eabc1314290ad467f14401f9726bc1ac18c741b8cb02b3a85e03f95ee4d371fca45e22'
   # Disable serving static files from the `/public` folder by default since
