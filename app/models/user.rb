@@ -8,11 +8,15 @@ class User < ApplicationRecord
 
 	def rating
 		ratings = self.mentor_ratings.map { |rating| rating.number }
-		ratings.inject { |a,b| a+b }/ratings.length
+		if ratings.length > 0
+			ratings.inject { |a,b| a+b }/ratings.length
+		else
+			return 0
+		end
 	end
 
   def level
-    questions = self.asked_questions
+    questions = self.answered_questions
     questions.length / 10
   end
 
