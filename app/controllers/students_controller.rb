@@ -6,9 +6,8 @@ class StudentsController < ApplicationController
   def show
     @skills = Skill.all
     @question = Question.new
-  	@user = User.find(current_user.id)
-
-    @questions = @user.asked_questions.where('created_at >= ?', 14.days.ago)
+  	@user = current_user
+    @questions = @user.asked_questions
   end
 
 end
