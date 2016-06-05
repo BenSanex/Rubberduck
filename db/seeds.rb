@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+## Production Seeds
 User.create(
 	full_name: "Mr Admin",
 	username: "admin",
@@ -14,6 +17,20 @@ User.create(
 	is_mentor: true
 )
 
+Skill.create(sub_type: "Ruby")
+Skill.create(sub_type: "JavaScript")
+Skill.create(sub_type: "Java")
+Skill.create(sub_type: "C++")
+Skill.create(sub_type: "Python")
+Skill.create(sub_type: "C")
+Skill.create(sub_type: "PHP")
+Skill.create(sub_type: "Perl")
+Skill.create(sub_type: "Objective-C")
+Skill.create(sub_type: "SQL")
+Skill.create(sub_type: "C#")
+Skill.create(sub_type: "Go")
+
+## Development Seeds
 5.times do
 	mentor = User.create(
 		full_name: Faker::Name.name,
@@ -25,7 +42,7 @@ User.create(
 	)
 	Expertise.create(
 		mentor_id: mentor.id,
-		skill_id: 1,
+		skill_id: rand(1..12),
 		level: rand(1..5)
 	)
 end
@@ -45,7 +62,7 @@ end
 	question = Question.create(
 		student_id: rand(7..11),
 		mentor_id: rand(1..6),
-		skill_id: 1,
+		skill_id: rand(1..12),
 		title: Faker::Lorem.sentence,
 		content: Faker::Lorem.paragraph,
 		solved?: true,
@@ -56,5 +73,3 @@ end
 		question_id: question.id
 	)
 end
-
-Skill.create(sub_type: "Ruby")
