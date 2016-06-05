@@ -1,5 +1,9 @@
 <p>
-	<%= button_to "End Session", new_question_rating_path(@question), method: :get %>
+	<% if @user.is_mentor %>
+		<%= button_to "End Session", question_path(@question), method: :put, params: {question_id: @question.id} %>
+	<% else %>
+		<%= button_to "End Session", new_question_rating_path(@question), method: :get %>
+	<% end %>
 </p>
 
 <iframe src="<%= @question.codeshare_url %>" height="100%"></iframe>

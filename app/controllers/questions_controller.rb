@@ -24,7 +24,11 @@ class QuestionsController < ApplicationController
     @user = current_user
     @question = Question.find(params[:question_id])
     puts @question
-    if @question.update(solved?: true)
+    if @user.is_mentor
+      @question.update(solved?: true, mentor_id: @user.id)
+      redirect_to @user
+    else
+      @question.update(solved?: true)
       redirect_to @user
     end
   end
