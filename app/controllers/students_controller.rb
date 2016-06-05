@@ -8,7 +8,6 @@ class StudentsController < ApplicationController
     @question = Question.new
   	@user = current_user
     @questions = @user.asked_questions
-    p @questions
   end
 
 end
