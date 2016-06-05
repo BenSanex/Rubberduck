@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :students, only: [:new, :create, :show]
   resources :mentors, only: [:new, :create, :show]
-  resources :questions do
+  resources :questions, except: [:index] do
     resources :ratings, only: [:new, :create]
   end
 

@@ -1,6 +1,4 @@
 class QuestionsController < ApplicationController
-  def index
-  end
 
   def show
     @question = Question.find(params[:id])
@@ -16,7 +14,8 @@ class QuestionsController < ApplicationController
         skill: @question.skill.sub_type,
         tag: @question.tag,
         url: @question.id
-      head :ok
+      # head :ok
+      redirect_to @question
     end
   end
 

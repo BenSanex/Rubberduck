@@ -1,6 +1,6 @@
 <%= @user.username %>
 
-<%= render '/questions/question_form' %>
+<%= render partial: '/questions/question_form', locals: {question: @question} %>
 
 <ul>
 	<% @questions.each do |question| %>
