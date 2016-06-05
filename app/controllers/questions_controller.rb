@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    @question.student_id = current_user
+    @question.student_id = current_user.id
     if @question.save
       ActionCable.server.broadcast 'questions',
         content: @question.content,

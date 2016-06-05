@@ -8,6 +8,7 @@
     <div class="span8">
       <h3><%= question.title %></h3>
       <h6><%= question.mentor.full_name %></h6>
+      <%= render partial: "shared/star_rating", locals: {user: question.mentor } %>
       <h6>Email: <%= question.mentor.email %></h6>
       <h6>Asked <%= time_ago_in_words(question.created_at) %> ago</h6>
     </div>

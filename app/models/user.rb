@@ -4,16 +4,10 @@ class User < ApplicationRecord
 	has_many :skills, through: :expertises
 	has_many :asked_questions, class_name: "Question", foreign_key: :student_id
 	has_many :answered_questions, class_name: "Question", foreign_key: :mentor_id
+	has_many :mentor_ratings, through: :answered_questions, source: :rating
 
 	def rating
-		questions = self.answered_questions
-		if questions.length > 0
-	    all_ratings = questions.map{ |question| question.rating }
-	  	ratings_value = all_ratings.map { |rating| rating.number.to_f }
-	  	rating  = ratings_value.inject(0){|sum,x| sum + x } / ratings_value.length
-	    return rating.round(1)
-	  else
-	  	return 0
-	  end
+		ratings = self.mentor_ratings.map { |rating| rating.number }
+		ratings.inject { |a,b| a+b }/ratings.length
 	end
 end
