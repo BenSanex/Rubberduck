@@ -1,7 +1,11 @@
+<button onclick='$.playSound("http://www.noiseaddicts.com/samples_1w72b820/3724")'>Play</button>
+
+
 App.questions = App.cable.subscriptions.create('MessagesChannel', {
   received: function(data) {
     return $('body').append(this.renderMessage(data));
     $('#lightbox').show();
+    '$.playSound("http://soundbible.com/mp3/Blop-Mark_DiAngelo-79054334")'
     $(document).on('click','#lightbox', function() {
       $('#lightbox').hide();
     });
