@@ -20,7 +20,7 @@
       </div>
       <% end %>
     <% else %>
-      <%= link_to sessions_new_path, class: "login-link" do %>
+      <%= link_to login_path, class: "login-link" do %>
       <div class="role-square">
         <div class="role-name">Student</div>
         <div class="role-hover">Login</div>
@@ -28,7 +28,7 @@
       <% end %>
     <% end %>
       <div class="role-register">
-        <p><%= link_to 'Student Registration', new_user_path %></p>
+        <p><%= link_to 'Student Registration', signup_path %></p>
       </div>
     </div>
 
@@ -41,7 +41,7 @@
       </div>
       <% end %>
     <% else %>
-      <%= link_to sessions_new_path, class: "login-link" do %>
+      <%= link_to login_path, class: "login-link" do %>
       <div class="role-square">
         <div class="role-name">Mentor</div>
         <div class="role-hover">Login</div>
@@ -49,7 +49,7 @@
       <% end %>
     <% end %>
       <div class="role-register">
-        <p><%= link_to 'Mentor Registration', new_user_path %></p>
+        <p><%= link_to 'Mentor Registration', signup_path %></p>
       </div>
     </div>
 

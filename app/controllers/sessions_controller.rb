@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def new
     render "new"
@@ -8,13 +9,17 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      redirect_to @user
+      if @user.is_mentor
+        redirect_to mentor_path(@user)
+      else
+        redirect_to student_path(@user)
+      end
     else
       render sessions_new_path
     end
   end
 
-  def logout
+  def destroy
     session.clear
     redirect_to :root
   end
