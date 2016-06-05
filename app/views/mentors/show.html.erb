@@ -1,5 +1,5 @@
-<%= javascript_include_tag "/queue" %>
-<%= javascript_include_tag "/zquestions" %>
+<%= javascript_include_tag "channels/queue" %>
+<%= javascript_include_tag "channels/zquestions" %>
 
 <%= render partial: "shared/mentor_portrait", locals: {user: @user} %>
 <%= render partial: "shared/star_rating", locals: {user: @user} %>
@@ -12,4 +12,3 @@ Hi, <%= @user.username %>. You're probably the best mentor around.
 
 <a href="https://images.rapgenius.com/9908cb640cf00bd6689bd2aee22f0a9d.768x506x1.jpg" class="lightbox_trigger">Lightbox Practice
 </a>
-s
