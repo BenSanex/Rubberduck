@@ -1,38 +1,44 @@
-<p>
-	<% if @user.is_mentor %>
-		<%= button_to "End Session", question_path(@question), method: :put, params: {question_id: @question.id} %>
-	<% else %>
-		<%= button_to "End Session", new_question_rating_path(@question), method: :get %>
-	<% end %>
-</p>
+<header>
+  <div id="codeshare">
+    <div id="codeshare-sidebar">
+      <p>
+        <% if @user.is_mentor %>
+          <%= button_to "End Session", question_path(@question), method: :put, params: {question_id: @question.id} %>
+        <% else %>
+          <%= button_to "End Session", new_question_rating_path(@question), method: :get %>
+        <% end %>
+      </p>
 
-<label id="minutes">00</label>:<label id="seconds">00</label>
+      <label id="minutes">00</label>:<label id="seconds">00</label>
+    </div>
 
-<iframe src="<%= @question.codeshare_url %>" height="100%"></iframe>
+    <iframe src="<%= @question.codeshare_url %>" height="100%" id="cs-iframe"></iframe>
 
-<script type="text/javascript">
-  var minutesLabel = document.getElementById("minutes");
-  var secondsLabel = document.getElementById("seconds");
-  var totalSeconds = 0;
-  setInterval(setTime, 1000);
+    <script type="text/javascript">
+      var minutesLabel = document.getElementById("minutes");
+      var secondsLabel = document.getElementById("seconds");
+      var totalSeconds = 0;
+      setInterval(setTime, 1000);
 
-  function setTime()
-  {
-    ++totalSeconds;
-    secondsLabel.innerHTML = pad(totalSeconds%60);
-    minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
-  }
+      function setTime()
+      {
+        ++totalSeconds;
+        secondsLabel.innerHTML = pad(totalSeconds%60);
+        minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+      }
 
-  function pad(val)
-  {
-    var valString = val + "";
-    if(valString.length < 2)
-    {
-      return "0" + valString;
-    }
-    else
-    {
-      return valString;
-    }
-  }
-</script>
+      function pad(val)
+      {
+        var valString = val + "";
+        if(valString.length < 2)
+        {
+          return "0" + valString;
+        }
+        else
+        {
+          return valString;
+        }
+      }
+    </script>
+  </div>
+</header>
