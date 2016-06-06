@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+/* Home page */
 #main-button {
   font-size: 30px;
   margin-left: 27px;
@@ -40,6 +41,16 @@
   margin-top: 10px;
   margin-right: 87px;
   margin-left: 82px;
+}
+
+/* Mentor Page */
+#mentor-background {
+  background: #1b99d3;
+}
+
+#mentor-portrait {
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
 html,
