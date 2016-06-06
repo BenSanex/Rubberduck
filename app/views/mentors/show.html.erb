@@ -8,12 +8,10 @@
             <span class="name"><%= @user.username %></span>
             <span class="skills">Level: <%= @user.level %></span>
             <span class="skills"><%= render partial: "shared/star_rating", locals: {user: @user} %></span>
+            <span class="skills"><%= render partial: "shared/badges", locals: {badges: @badges} %></span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </header>
-
-<%= javascript_include_tag "channels/queue.js" %>
-<%= javascript_include_tag "channels/zquestions.js" %>

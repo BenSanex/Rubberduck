@@ -1,5 +1,5 @@
 class Expertise < ApplicationRecord
-	has_many :mentors, class_name: "User"
-	has_many :skills
+	belongs_to :mentor, class_name: "User"
+	belongs_to :skill
 
 end
