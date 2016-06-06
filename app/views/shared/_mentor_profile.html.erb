@@ -2,14 +2,18 @@
 <div class="container-fluid well span6">
 	<div class="row-fluid">
     <div class="span2" >
-    	<img src="<%= question.mentor.avatar %>" class="img-circle">
+      <% if question.mentor %>
+    	 <img src="<%= question.mentor.avatar %>" class="img-circle">
+      <% end %>
     </div>
 
     <div class="span8">
       <h3><%= question.title %></h3>
-      <h6><%= question.mentor.full_name %></h6>
-      <%= render partial: "shared/star_rating", locals: {user: question.mentor } %>
-      <h6>Email: <%= question.mentor.email %></h6>
+      <% if question.mentor %>
+        <h6><%= question.mentor.full_name %></h6>
+        <%= render partial: "shared/star_rating", locals: {user: question.mentor } %>
+        <h6>Email: <%= question.mentor.email %></h6>
+      <% end %>
       <h6>Asked <%= time_ago_in_words(question.created_at) %> ago</h6>
     </div>
 
