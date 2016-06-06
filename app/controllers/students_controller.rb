@@ -8,6 +8,7 @@ class StudentsController < ApplicationController
     @question = Question.new
   	@user = current_user
     @questions = @user.asked_questions
+    redirect_to root unless @current_user.id == @user.id
   end
 
 end

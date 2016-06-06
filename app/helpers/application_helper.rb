@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def current_user
     @current_user ||= User.find(session[:user_id]) if logged_in?
   end
@@ -16,7 +17,7 @@ module ApplicationHelper
   end
 
   def authenticate_user!
-    redirect_to root_path unless current_user
+    redirect_to root unless current_user
   end
 
 end
