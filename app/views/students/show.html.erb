@@ -1,9 +1,14 @@
 <%= @user.username %>
 
 <%= render partial: '/questions/question_form', locals: {question: @question} %>
+<div class="student-questions">
+	<ul>
+		<% @questions.each do |question| %>
+			<%= render partial: '/shared/mentor_profile', locals: {question: question} %>
+		<% end %>
+	</ul>
 
-<ul>
-	<% @questions.each do |question| %>
-		<%= render partial: '/shared/mentor_profile', locals: {question: question} %>
-	<% end %>
-</ul>
+	<div class='question-link'>
+		<a href='/questions/question_form'>Ask a Question</a>
+	</div>
+</div>
