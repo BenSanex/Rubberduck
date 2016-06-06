@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
         tag: @question.tag,
         url: @question.id
       # head :ok
-      redirect_to @question
+      redirect_to "https://rubberduckapp.herokuapp.com/questions/#{@question.id}"
     end
   end
 
@@ -36,6 +36,10 @@ class QuestionsController < ApplicationController
 
 
   private
+
+  def ssl_configured?
+    !Rails.env.development?
+  end
 
   def question_params
     params.require(:question).permit(:content, :title, :skill_id, :tag)

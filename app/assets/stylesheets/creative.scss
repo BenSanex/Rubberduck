@@ -55,20 +55,6 @@
   border: 1px solid white;
 }
 
-/* Login Page */
-#login-container {
-  width: 50%;
-}
-
-#header-container {
-  left: 250px;
-}
-
-#form-email,
-#form-password {
-  width: 100%;
-}
-
 /* Question Page */
 #codeshare {
   margin-top: 50px;
@@ -102,6 +88,11 @@
 }
 #mentor-profile-mini {
   transform: scale(0.5);
+}
+
+#email, 
+#pwd {
+  margin-bottom: 10px;
 }
 
 html,
