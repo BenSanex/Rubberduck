@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def new
-    p params
     render "new"
   end
 
@@ -16,7 +15,7 @@ class SessionsController < ApplicationController
         redirect_to student_path(@user)
       end
     else
-      render login_path
+      redirect_to login_path
     end
   end
 
