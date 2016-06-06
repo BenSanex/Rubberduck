@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  default_url_options protocol: :https
+  
   get '/signup', to: "registrations#new"
   post '/signup', to: "registrations#create", as: 'new_user'
 
