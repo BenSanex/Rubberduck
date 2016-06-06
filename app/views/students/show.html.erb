@@ -33,10 +33,7 @@ $(function() {
               </div>
 
               <div class="col-md-4">
-                <select name="Skill" class="form-control">
-                	<option value="Ruby">Ruby</option>
-						      <option value="Python">Python</option>
-                </select>
+              	<%= f.collection_select(:skill_id, Skill.all, :id, :sub_type, {}, {class: "form-control"}) %>
               </div>
 
               <div class="col-md-12">
