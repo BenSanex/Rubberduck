@@ -22,18 +22,31 @@
 
   </head>
 
-  <body class=>
-    <div class="container">
-      <div class="top-nav span">
-        <div class="nav-container col-lg-12">
-          <div class="company-name"></div>
-          <div class="logo"></div>
-          <% if logged_in? %>
-            <%= link_to "Logout", logout_path, action: 'destroy' %>
-          <% end %>
-        </div>
+  <body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand page-scroll" href="/">Rubberduck</a>
+              <a class="navbar-brand page-scroll" id="main-logo"></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <% if logged_in? %>
+                    <%= link_to "Logout", logout_path, action: 'destroy', class: "page-scroll" %>
+                  <% end %>
+                </li>
+              </ul>
+          </div>
       </div>
-    </div>
+    </nav>
 
     <%= yield %>
 
