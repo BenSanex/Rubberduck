@@ -49,8 +49,23 @@
 }
 
 #mentor-portrait {
+  background: white;
   border-radius: 50%;
   border: 1px solid white;
+}
+
+/* Login Page */
+#login-container {
+  width: 50%;
+}
+
+#header-container {
+  left: 250px;
+}
+
+#form-email,
+#form-password {
+  width: 100%;
 }
 
 html,
