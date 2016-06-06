@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+force_ssl if: :ssl?_configured?
 
   def show
     @question = Question.find(params[:id])
@@ -35,6 +36,9 @@ class QuestionsController < ApplicationController
 
 
   private
+  def ssl_configured?
+    !Rails.env.development?
+  end
 
   def question_params
     params.require(:question).permit(:content, :title, :skill_id, :tag)
