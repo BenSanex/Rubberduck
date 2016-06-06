@@ -68,6 +68,25 @@
   width: 100%;
 }
 
+/* Question Page */
+#codeshare {
+  margin-top: 50px;
+}
+
+#cs-iframe {
+  width: 90%;
+  margin-left: 137px;
+}
+
+#codeshare-sidebar {
+  width: 10%;
+  height: 850px;
+  margin-top: 50px;
+  position: absolute;
+  background-color: #f8f8f8;
+  color: #1b99d3;
+}
+
 html,
 body {
   height: 100%;
