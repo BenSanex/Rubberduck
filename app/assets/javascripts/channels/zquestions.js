@@ -1,15 +1,8 @@
-//
-// <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
-// <p>
-//   Please remember to remove .mp3 file extension.
-// </p>
-// <button onclick='$.playSound("http://www.noiseaddicts.com/samples_1w72b820/3724")'>Play</button>
-
-
 App.questions = App.cable.subscriptions.create('MessagesChannel', {
   received: function(data) {
     return $('body').append(this.renderMessage(data));
     $('#lightbox').show();
+    $().playSound("http://www.noiseaddicts.com/samples_1w72b820/3724");
     $(document).on('click','#lightbox', function() {
       $('#lightbox').hide();
     });
