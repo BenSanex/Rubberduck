@@ -13,7 +13,7 @@
 
     <div class="col-lg-6 left-side">
     <% if @user %>
-      <%= link_to student_path(@user.id), class: "login-link" do %>
+      <%= link_to student_path(@user), class: "login-link" do %>
       <div class="role-square">
         <div class="role-name">Student</div>
         <div class="role-hover">Login</div>
@@ -34,7 +34,7 @@
 
     <div class="col-lg-6 right-side">
     <% if @user %>
-      <%= link_to mentor_path(@user.id), class: "login-link" do %>
+      <%= link_to mentor_path(@user), class: "login-link" do %>
       <div class="role-square">
         <div class="role-name">Mentor</div>
         <div class="role-hover">Login</div>
