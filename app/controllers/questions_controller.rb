@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-force_ssl if: :ssl?_configured?
+force_ssl if: :ssl_configured?
 
   def show
     @question = Question.find(params[:id])
@@ -36,6 +36,7 @@ force_ssl if: :ssl?_configured?
 
 
   private
+
   def ssl_configured?
     !Rails.env.development?
   end
