@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   default_url_options protocol: :https
 
-  get '/signup', to: "registrations#new"
+  get '/mentors/new', to: "mentors#new"
+  get '/students/new', to: "students#new"
   post '/signup', to: "registrations#create", as: 'new_user'
 
   get 'login', to: "sessions#new"
