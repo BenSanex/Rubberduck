@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Rubberduck</title>
+   <%= csrf_meta_tags %>
+   <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <%= javascript_include_tag 'https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js' %>
+    <!-- FONT AWESOME -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  </head>
+
+  <body class=>
+    <div class="container">
+      <div class="top-nav span">
+        <div class="nav-container col-lg-12">
+          <div class="company-name"></div>
+          <div class="logo"></div>
+          <% if logged_in? %>
+            <%= link_to "Logout", logout_path, action: 'destroy' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <%= yield %>
+
+  </body>
+</html>
