@@ -1,14 +1,25 @@
+<script>
+$(function() {
+	$('#question-link').click(function(event){
+		event.preventDefault();
+		$('#student-questions').toggleClass('hidden');
+	});
+});
+</script>
+
 <%= @user.username %>
 
-<%= render partial: '/questions/question_form', locals: {question: @question} %>
-<div class="student-questions">
-	<ul>
-		<% @questions.each do |question| %>
-			<%= render partial: '/shared/mentor_profile', locals: {question: question} %>
-		<% end %>
-	</ul>
+<div id="student-questions" class='hidden'>
+	<%= render partial: '/questions/question_form', locals: {question: @question} %>
+</div>
 
-	<div class='question-link'>
-		<a href='/questions/question_form'>Ask a Question</a>
-	</div>
+
+<ul>
+	<% @questions.each do |question| %>
+		<%= render partial: '/shared/mentor_profile', locals: {question: question} %>
+	<% end %>
+</ul><br><br><br>
+
+<div>
+	<a href='#' id='question-link'>Ask a Question</a>
 </div>
