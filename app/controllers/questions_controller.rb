@@ -1,5 +1,4 @@
 class QuestionsController < ApplicationController
-force_ssl if: :ssl_configured?
 
   def show
     @question = Question.find(params[:id])
@@ -17,7 +16,7 @@ force_ssl if: :ssl_configured?
         tag: @question.tag,
         url: @question.id
       # head :ok
-      redirect_to @question
+      redirect_to "https://rubberduckapp.herokuapp.com/questions/#{@question.id}"
     end
   end
 
