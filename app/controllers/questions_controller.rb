@@ -3,7 +3,6 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
   	@user = User.find(current_user.id)
-    @user.verify_current_user?
   end
 
   def create
