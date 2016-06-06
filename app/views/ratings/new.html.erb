@@ -1,11 +1,20 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<div class="container">
+<!-- <div class="container"> -->
+<div class="container-fluid">
 	<h1>How was your session?</h1>
 	<h3>Please rate your experience below</h3>
 	<p><%= @question.title %></p>
 
-	<%= render partial: "rating_form", locals: {rating: @rating} %>
+	<div class="row">
+      <div class="col-sm-12">
+        <div id="stars" class="starrr"><i class="glyphicon-star glyphicon"></i><i class="glyphicon-star glyphicon"></i><i class="glyphicon-star glyphicon"></i><i class="glyphicon-star-empty glyphicon"></i><i class="glyphicon-star-empty glyphicon"></i>
+        </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="javascripts/star_rating.js"></script>
 </div>
+
+<!-- </div> -->
 
 <a href="https://twitter.com/intent/tweet?button_hashtag=Rubberduckapp&text=Another%20problem%20solved%20by" class="twitter-hashtag-button" data-size="large">Tweet #Rubberduckapp</a>
