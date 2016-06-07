@@ -24,7 +24,7 @@ User.create(
 	username: "Scott",
 	email: "scott@rubberduck.com",
 	password: "password",
-	avatar: "http://i.imgur.com/EW4Y01j.jpg",
+	avatar: "http://i.imgur.com/REUjBuX.jpg?1",
 	is_mentor: true
 )
 
@@ -40,6 +40,8 @@ Skill.create(sub_type: "Objective-C")
 Skill.create(sub_type: "SQL")
 Skill.create(sub_type: "C#")
 Skill.create(sub_type: "Go")
+Skill.create(sub_type: "HTML")
+Skill.create(sub_type: "CSS")
 
 ## Development Seeds
 # 5.times do
@@ -67,7 +69,7 @@ Skill.create(sub_type: "Go")
 # 		avatar: Faker::Avatar.image,
 # 		is_mentor: false
 # 	)
-end
+# end
 
 30.times do
 	question = Question.create(

@@ -13,6 +13,7 @@
             <span class="name"><%= @user.username %></span>
             <span class="skills">Level: <%= @user.level %></span>
             <span class="skills"><%= render partial: "shared/star_rating", locals: {user: @user} %></span>
+            <a href='#' type='button' class="btn btn-primary" id='skill-adder'>Add New Skill</a>
           </div>
         </div>
       </div>
