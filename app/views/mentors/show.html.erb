@@ -4,7 +4,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="thediv">
+            <% if @user.answered_questions.length > 0 %>
             <img class="mentor-borders" src="/assets/border_background.png">
+            <% end %>
             <img id="mentor-portrait" src="<%= @user.avatar %>" alt="">
             <!-- <img class="mentor-borders" src="/assets/border_foreground.png"> -->
           </div>
