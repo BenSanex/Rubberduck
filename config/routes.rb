@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   get'/logout', to: "sessions#destroy"
 
-
   get '/student/profile', to: "students#show", as: 'student'
 
   get '/mentor/profile', to: "mentors#show", as: 'mentor'
