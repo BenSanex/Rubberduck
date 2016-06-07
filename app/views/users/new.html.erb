@@ -48,7 +48,9 @@
                   <%= f.password_field :password, autocomplete: "off", class: "form-control input-md", id: "pwd", placeholder: "Enter Password" %>
                 </div>
               </div>
-
+                  <% if @mentor %>
+                    <%= f.hidden_field :is_mentor, :value => true %>
+                  <% end %>
               <!-- Button -->
               <div class="form-group">
                 <label class="col-md-4 control-label" for=""></label>
