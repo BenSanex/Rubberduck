@@ -9,7 +9,7 @@
             <!-- <img class="mentor-borders" src="/assets/border_foreground.png"> -->
           </div>
           <div class="intro-text">
-            <span class="skills"><%= render partial: "shared/badges", locals: {badges: @badges} %></span>
+            <span class="skills"><%= render partial: "shared/badges", locals: {badges: @badges, user: @user} %></span>
             <span class="name"><%= @user.username %></span>
             <span class="skills">Level: <%= @user.level %></span>
             <span class="skills"><%= render partial: "shared/star_rating", locals: {user: @user} %></span>
