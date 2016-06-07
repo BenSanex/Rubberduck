@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.avatar == "http://"
+    if @user.avatar == "http://" || @user.avatar == nil
       @user.avatar = "/assets/default_portrait.jpg"
     end
     if @user.save

@@ -1,16 +1,61 @@
+<% if @user.badges.include?('ruby') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Ruby Expert!"><i class="fa fa-diamond fa-fw" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-hashtag" aria-hidden="true"></i>
+<% if @user.badges.include?('java') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Java Expert!"><i class="fa fa-coffee fa-fw" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-coffee" aria-hidden="true"></i>
+<% if @user.badges.include?('C#') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="C# Expert!"><i class="fa fa-hashtag" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-chrome" aria-hidden="true"></i>
+<% if @user.badges.include?('html') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="HTML Expert!"><i class="fa fa-chrome" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-video-camera" aria-hidden="true"></i>
+<% if @user.badges.include?('css') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="CSS Expert!"><i class="fa fa-paint-brush" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-github-alt" aria-hidden="true"></i>
+<% if @user.badges.include?('javascript') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="JavaScript Expert!"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-gamepad" aria-hidden="true"></i>
+<% if @user.badges.include?('C++') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="C++ Expert!"><i class="fa fa-plus" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-rocket" aria-hidden="true"></i>
+<% if @user.badges.include?('python') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Python Expert!"><i class="fa fa-level-up" aria-hidden="true"></i></a>
+<% end %>
 
-<i class="fa fa-diamond fa-fw" aria-hidden="true"></i>
+<% if @user.badges.include?('earned_wings') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="You've earned your wings!"><i class="fa fa-rocket" aria-hidden="true"></i></a>
+<% end %>
+
+<% if @user.badges.include?('five_questions') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="You answered 5 questions!"><i class="fa fa-bolt" aria-hidden="true"></i></a>
+<% end %>
+
+<% if @user.badges.include?('ten_questions') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="You answered 10 questions!"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+<% end %>
+
+<% if @user.badges.include?('start') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Congrats on being a Mentor!"><i class="fa fa-gift" aria-hidden="true"></i></a>
+<% end %>
+
+<% if @user.full_name == "Denny Jovic" %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Your name is the coolest!"><i class="fa fa-gamepad" aria-hidden="true"></i></a>
+<% end %>
+
+<% if @user.badges.include?('two_skils') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="You are a diverse expert!"><i class="fa fa-question" aria-hidden="true"></i></a>
+<% end %>
+
+<script>
+	$(document).ready(function(){
+	    $('[data-toggle="tooltip"]').tooltip(); 
+	});
+</script>
