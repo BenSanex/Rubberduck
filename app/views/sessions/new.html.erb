@@ -13,7 +13,7 @@
               <div class="form-group">
                 <%= f.label :email, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                <%= f.text_field :email, autofocus: true, class: "form-control input-md", id: "email", placeholder: "Enter Email" %>
+                <%= f.text_field :email, autofocus: true, class: "form-control input-md", id: "email", placeholder: "Enter Email", required: true%>
                 </div>
               </div>
 
@@ -21,7 +21,7 @@
               <div class="form-group">
                 <%= f.label :password, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                  <%= f.password_field :password, autocomplete: "off", class: "form-control input-md", id: "pwd", placeholder: "Enter Password" %>
+                  <%= f.password_field :password, autocomplete: "off", class: "form-control input-md", id: "pwd", placeholder: "Enter Password", required: true %>
                 </div>
               </div>
 
