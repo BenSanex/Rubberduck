@@ -12,10 +12,10 @@ class RegistrationsController < ApplicationController
     if @user.save
       if @user.is_mentor
         session[:user_id] = @user.id
-        redirect_to mentor_path(@user)
+        redirect_to mentor_path
       else
         session[:user_id] = @user.id
-        redirect_to student_path(@user)
+        redirect_to student_path
       end
     else
       render :new
