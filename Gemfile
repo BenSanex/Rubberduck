@@ -27,6 +27,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'twitter'
 gem 'omniauth-twitter'
+gem 'simplecov', :require => false, :group => :test
+
+group :test do
+  gem 'minitest-rails',  git: 'https://github.com/blowmage/minitest-rails', branch: 'rails5'
+  gem 'minitest-spec-rails'
+end
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
