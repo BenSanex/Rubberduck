@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(document).on('click','#skill-adder',function() {
     event.preventDefault();
-    console.log('fuck you shit fuck')
-
+    $('.expertise-form').toggleClass('hidden');
+    $('#skill-adder').toggleClass('hidden');
   });
 })

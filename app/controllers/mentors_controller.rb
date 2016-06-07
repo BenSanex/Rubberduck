@@ -11,6 +11,7 @@ class MentorsController < ApplicationController
   end
 
   def show
+    @expertise = Expertise.new
   	@user = User.find(current_user.id)
     @badges = @user.badges
   end
