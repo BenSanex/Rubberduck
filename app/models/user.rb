@@ -38,7 +38,8 @@ class User < ApplicationRecord
     badge_array << 'five_questions' if self.answered_questions.length >= 5
     badge_array << 'ten_questions' if self.answered_questions.length >= 10
     badge_array << 'two_skills' if self.skills_array.length >= 1
-    badge_array << 'start' if self
+    badge_array << 'level_up' if self.level > 1
+    badge_array << 'start'
   end
 
   def skills_array
