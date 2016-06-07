@@ -11,6 +11,15 @@
   margin-right: 41px;
 }
 
+#main-button:hover {
+  content: none;
+}
+
+#main-button:hover:after {
+  content: "Login";
+  font-size: 30px;
+}
+
 #main-tagline {
   font-size: 50px;
   color: #ffbe15;
