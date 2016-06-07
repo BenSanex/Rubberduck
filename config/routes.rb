@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/mentor/profile', to: "mentors#show", as: 'mentor'
 
 
-  resources :questions, except: [:index, :new, :edit, :update, :destroy] do
+  resources :questions, except: [:index, :new, :edit, :destroy] do
     resources :ratings, only: [:new, :create]
   end
 
