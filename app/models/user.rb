@@ -29,6 +29,18 @@ class User < ApplicationRecord
     badge_array << '3' if self.level > 3
     badge_array << 'ruby' if self.skills_array.include?('Ruby')
     badge_array << 'C#' if self.skills_array.include?('C#')
+    badge_array << 'java' if self.skills_array.include?('Java')
+    badge_array << 'html' if self.skills_array.include?('HTML')
+    badge_array << 'css' if self.skills_array.include?('CSS')
+    badge_array << 'javascript' if self.skills_array.include?('JavaScript')
+    badge_array << 'C++' if self.skills_array.include?('C++')
+    badge_array << 'python' if self.skills_array.include?('Python')
+    badge_array << 'five_star' if self.mentor_ratings.map { |rating| rating.number }.include?(5)
+    badge_array << 'earned_wings' if self.answered_questions.length >= 1
+    badge_array << 'five_questions' if self.answered_questions.length >= 5
+    badge_array << 'ten_questions' if self.answered_questions.length >= 10
+    badge_array << 'two_skills' if self.skills_array.length >= 1
+    badge_array << 'start' if self
   end
 
   def skills_array
