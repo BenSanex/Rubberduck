@@ -30,6 +30,26 @@
 	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Python Expert!"><i class="fa fa-level-up" aria-hidden="true"></i></a>
 <% end %>
 
+<% if user.badges.include?('php') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="PHP Expert!"><i class="fa fa-bullhorn" aria-hidden="true"></i></a>
+<% end %>
+
+<% if user.badges.include?('perl') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Perl Expert!"><i class="fa fa-circle" aria-hidden="true"></i></a>
+<% end %>
+
+<% if user.badges.include?('o-c') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Objective-C Expert!"><i class="fa fa-mobile" aria-hidden="true"></i></a>
+<% end %>
+
+<% if user.badges.include?('sql') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="SQL Expert!"><i class="fa fa-database" aria-hidden="true"></i></a>
+<% end %>
+
+<% if user.badges.include?('go') %>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Go Expert!"><i class="fa fa-car" aria-hidden="true"></i></a>
+<% end %>
+
 <% if user.badges.include?('earned_wings') %>
 	<a href="#" data-toggle="tooltip" data-placement="bottom" title="You've earned your wings!"><i class="fa fa-rocket" aria-hidden="true"></i></a>
 <% end %>

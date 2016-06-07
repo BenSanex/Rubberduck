@@ -35,6 +35,11 @@ class User < ApplicationRecord
     badge_array << 'javascript' if self.skills_array.include?('JavaScript')
     badge_array << 'C++' if self.skills_array.include?('C++')
     badge_array << 'python' if self.skills_array.include?('Python')
+    badge_array << 'php' if self.skills_array.include?('PHP')
+    badge_array << 'perl' if self.skills_array.include?('Perl')
+    badge_array << 'o-c' if self.skills_array.include?('Objective-C')
+    badge_array << 'sql' if self.skills_array.include?('SQL')
+    badge_array << 'go' if self.skills_array.include?('Go')
     badge_array << 'five_star' if self.mentor_ratings.map { |rating| rating.number }.include?(5)
     badge_array << 'earned_wings' if self.answered_questions.length >= 1
     badge_array << 'five_questions' if self.answered_questions.length >= 5
