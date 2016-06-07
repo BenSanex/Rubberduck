@@ -5,6 +5,8 @@ class User < ApplicationRecord
 	has_many :asked_questions, class_name: "Question", foreign_key: :student_id
 	has_many :answered_questions, class_name: "Question", foreign_key: :mentor_id
 	has_many :mentor_ratings, through: :answered_questions, source: :rating
+  validates :email, uniqueness: true
+  validates :username, uniqueness: true
 
 	def rating
 		ratings = self.mentor_ratings.map { |rating| rating.number }

@@ -21,7 +21,8 @@ class RegistrationsController < ApplicationController
         redirect_to student_path
       end
     else
-      render :new
+      @message = 'This Email Address Is Already In Use'
+      render :'users/new'
     end
   end
 

@@ -68,6 +68,12 @@
                 </div>
               </div>
             <% end %>
+            <% if @message %>
+              <div class='alert alert-danger col-md-4 col-md-offset-5'>
+                <span class="close" data-dismiss="alert">&times;</span>
+                <p><%= @message %></p>
+              </div>
+            <% end %>
           </span>
           </div>
         </div>

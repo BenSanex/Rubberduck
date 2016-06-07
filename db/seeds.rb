@@ -67,7 +67,7 @@ Skill.create(sub_type: "Go")
 # 		avatar: Faker::Avatar.image,
 # 		is_mentor: false
 # 	)
-end
+# end
 
 30.times do
 	question = Question.create(
