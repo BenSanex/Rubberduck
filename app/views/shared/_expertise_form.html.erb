@@ -1,5 +1,5 @@
 <div class="col-lg-10 col-lg-offset-1 text-center">
-<%= form_for(@expertise, class: "contact-form row") do |f| %>
+<%= form_for(expertise, class: "contact-form row") do |f| %>
 
   <div class="col-md-6">
     <%= f.collection_select(:skill_id, Skill.all, :id, :sub_type, {}, {class: "form-control", required: true}) %>
