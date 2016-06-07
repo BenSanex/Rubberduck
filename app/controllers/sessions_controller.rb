@@ -15,7 +15,8 @@ class SessionsController < ApplicationController
         redirect_to student_path
       end
     else
-      redirect_to login_path
+      @message = 'Invalid Email/Password Combination'
+      render 'new'
     end
   end
 
