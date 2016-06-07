@@ -1,0 +1,23 @@
+<div class="col-lg-10 col-lg-offset-1 text-center">
+  <%= form_for(question, url: questions_path, class: "contact-form row") do |f| %>
+    <div class="col-md-4">
+      <%= f.text_field :title, data: {textfield: "message"}, class: "form-control", placeholder: "Title", required: true %>
+    </div>
+
+    <div class="col-md-4">
+      <%= f.collection_select(:skill_id, Skill.all, :id, :sub_type, {}, {class: "form-control", required: true}) %>
+    </div>
+
+    <div class="col-md-4">
+      <%= f.text_field :tag, data: {textfield: "message"}, class: "form-control", placeholder: "Tags" %>
+    </div>
+
+    <div class="col-md-12">
+      <label></label>
+      <%= f.text_area :content, data: {send: "message"}, class: "form-control", rows: "9", placeholder: "A short description here...", required: true %>
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+      <label></label>
+      <%= f.submit "Ask", class: "btn btn-primary btn-block btn-lg" %>
+    </div>
+  <% end %>
