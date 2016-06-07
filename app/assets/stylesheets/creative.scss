@@ -16,19 +16,44 @@
 }
 
 /* Home page */
-#main-button {
+#main-button, 
+#mentor-button {
   font-size: 30px;
   margin-left: 27px;
   margin-right: 41px;
+  -o-transition:0s;
+  -ms-transition:0s;
+  -moz-transition:0s;
+  -webkit-transition:0s;
+  transition:0s;
 }
 
-#main-button:hover {
-  content: none;
+#mentor-button {
+  padding: 6px 17px;
+}
+
+#main-button:hover,
+#mentor-button:hover {
+  font-size: 0px;
+  -o-transition:0s;
+  -ms-transition:0s;
+  -moz-transition:0s;
+  -webkit-transition:0s;
+  transition:0s;
 }
 
 #main-button:hover:after {
   content: "Login";
   font-size: 30px;
+  padding-left: 21%;
+  padding-right: 21%;
+}
+
+#mentor-button:hover:after {
+  content: "Login";
+  font-size: 30px;
+  padding-left: 19.15%;
+  padding-right: 19.15%;
 }
 
 #main-tagline {

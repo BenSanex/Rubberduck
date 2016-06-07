@@ -37,7 +37,13 @@
       </div>
     </section>
   </div>
+
 </header>
+<div>
+  <% @questions.each do |question| %>
+  <p><%= question.title %></p>
+  <% end %>
+</div>
 
 <script>
 $(function() {
