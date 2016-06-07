@@ -1,6 +1,7 @@
 <header id="student-page">
   <div class="header-content">
     <section id="last">
+      <span class="name"><%= @user.username %></span>
       <div id="question-container" class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -38,6 +39,22 @@
     </section>
   </div>
 </header>
+
+<div class="last-5-questions">
+  <p>Recent Questions</p>
+  <ul>
+  <% questions = @user.asked_questions.last(5).reverse %>
+  <% questions.each do |question| %>
+    <li>
+      <a href=<%= question.codeshare_url %>> <%= question.title %></a><%= question.created_at.strftime("%m-%d-%Y") %>
+      <%= Skill.find(question.skill_id).sub_type %> <%= question.tag %>
+      <% if question.mentor_id != nil %>
+        Mentor: <%= User.find(question.mentor_id).username %>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
 
 <script>
 $(function() {
