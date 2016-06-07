@@ -24,7 +24,7 @@ User.create(
 	username: "Scott",
 	email: "scott@rubberduck.com",
 	password: "password",
-	avatar: "http://i.imgur.com/EW4Y01j.jpg",
+	avatar: "http://i.imgur.com/REUjBuX.jpg?1",
 	is_mentor: true
 )
 
