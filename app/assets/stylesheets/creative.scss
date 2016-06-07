@@ -16,7 +16,7 @@
 }
 
 /* Home page */
-#main-button, 
+#main-button,
 #mentor-button {
   font-size: 30px;
   margin-left: 27px;
@@ -129,6 +129,10 @@
 /* Student Page */
 #question-container {
   margin-top: -150px;
+}
+
+#question-form {
+  display: block
 }
 
 #student-page {
@@ -731,4 +735,7 @@ h4.timeline-title a {
 h4.timeline-title a:hover,
 h4.timeline-title a:focus {
   color: #1b99d3;
+}
+
+#student-page img {
 }
