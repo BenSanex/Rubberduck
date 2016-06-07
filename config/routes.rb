@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/student/profile', to: "students#show", as: 'student'
 
   get '/mentor/profile', to: "mentors#show", as: 'mentor'
+  post '/expertise', to: "expertises#create", as: 'expertise'
 
 
   resources :questions, except: [:index, :new, :edit, :destroy] do
