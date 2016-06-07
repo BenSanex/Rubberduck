@@ -13,7 +13,7 @@
               <div class="form-group">
                 <%= f.label :name, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                <%= f.text_field :full_name, autofocus: true, class: "form-control input-md", id: "email", placeholder: "Enter Full Name" %>
+                <%= f.text_field :full_name, autofocus: true, class: "form-control input-md", id: "email", placeholder: "Enter Full Name", required: true %>
                 </div>
               </div>
 
@@ -21,7 +21,7 @@
               <div class="form-group">
                 <%= f.label :username, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                <%= f.text_field :username, class: "form-control input-md", id: "email", placeholder: "Enter Username" %>
+                <%= f.text_field :username, class: "form-control input-md", id: "email", placeholder: "Enter Username", required: true %>
                 </div>
               </div>
 
@@ -29,7 +29,7 @@
               <div class="form-group">
                 <%= f.label :email, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                <%= f.text_field :email, class: "form-control input-md", id: "email", placeholder: "Enter Email" %>
+                <%= f.email_field :email, class: "form-control input-md", id: "email", placeholder: "Enter Email", required: true %>
                 </div>
               </div>
 
@@ -37,7 +37,7 @@
               <div class="form-group">
                 <%= f.label :picture, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                <%= f.text_field :avatar, autocomplete: "off", class: "form-control input-md", id: "email", placeholder: "Enter URL" %>
+                <%= f.text_field :avatar, autocomplete: "off", class: "form-control input-md", id: "email", value: "http://" %>
                 </div>
               </div>
 
@@ -45,12 +45,21 @@
               <div class="form-group">
                 <%= f.label :password, class: "col-md-4 control-label" %>
                 <div class="col-md-6">
-                  <%= f.password_field :password, autocomplete: "off", class: "form-control input-md", id: "pwd", placeholder: "Enter Password" %>
+                  <%= f.password_field :password, autocomplete: "off", class: "form-control input-md", id: "pwd", placeholder: "Enter Password", required: true %>
                 </div>
               </div>
-                  <% if @mentor %>
-                    <%= f.hidden_field :is_mentor, :value => true %>
-                  <% end %>
+
+              <!-- Password Confirmation -->
+              <div class="form-group">
+                <%= f.label :password_confirm, class: "col-md-4 control-label" %>
+                <div class="col-md-6">
+                  <%= f.password_field :password_confirm, autocomplete: "off", class: "form-control input-md", id: "pwd", placeholder: "Re-enter Password", required: true %>
+                </div>
+              </div>
+
+                <% if @mentor %>
+                  <%= f.hidden_field :is_mentor, :value => true %>
+                <% end %>
               <!-- Button -->
               <div class="form-group">
                 <label class="col-md-4 control-label" for=""></label>
