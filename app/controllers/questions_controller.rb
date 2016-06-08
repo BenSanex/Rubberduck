@@ -1,8 +1,18 @@
 class QuestionsController < ApplicationController
+  # before_action :is_user?, only: [:show]
 
   def show
-    @question = Question.find(params[:id])
-  	@user = User.find(current_user.id)
+    @user = current_user
+    if is_user?
+      ActionCable.server.broadcast 'rooms',
+      @question = Question.find(params[:id])
+    else
+      if @user.is_mentor
+        redirect_to mentor_path
+      else
+        redirect_to student_path
+      end
+    end
   end
 
   def create
@@ -26,15 +36,21 @@ class QuestionsController < ApplicationController
     puts @question
     if @user.is_mentor
       @question.update(solved?: true, mentor_id: @user.id)
-      redirect_to mentor_path(@user)
+      redirect_to mentor_path
     else
       @question.update(solved?: true)
-      redirect_to @user
+      redirect_to student_path
     end
   end
 
 
   private
+
+  def is_user?
+    question = Question.find(params[:id])
+    student = User.find(question.student_id)
+    current_user.id == question.mentor_id || current_user == student
+  end
 
   def ssl_configured?
     !Rails.env.development?

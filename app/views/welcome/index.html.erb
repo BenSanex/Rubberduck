@@ -8,8 +8,8 @@
         <%= link_to "Students", student_path, class: "btn btn-primary btn-xl page-scroll", id: "main-button" %>
         <%= link_to "Mentors", mentor_path, class: "btn btn-primary btn-xl page-scroll", id: "mentor-button" %>
       <% else %>
-        <%= link_to "Students", login_path, class: "btn btn-primary btn-xl page-scroll", id: "main-button" %>
-        <%= link_to "Mentors", login_path, class: "btn btn-primary btn-xl page-scroll", id: "main-button" %>
+        <%= link_to "Students", login_path, class: "btn btn-primary btn-xl page-scroll", id: "main-button", html: {'data-toggle' => "modal", 'data-target' => "#myModal"} %>
+        <%= link_to "Mentors", login_path, class: "btn btn-primary btn-xl page-scroll", id: "mentor-button" %>
       <% end %>
     </div>
     <div class="header-content-inner">
@@ -18,3 +18,20 @@
     </div>
   </div>
 </header>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <%= render "sessions/form" %>
+      </div>
+    </div>
+
+  </div>
+</div>

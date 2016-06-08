@@ -73,7 +73,7 @@ Skill.create(sub_type: "CSS")
 
 30.times do
 	question = Question.create(
-		student_id: rand(7..11),
+		student_id: rand(1..3),
 		mentor_id: rand(1..3),
 		skill_id: rand(1..12),
 		title: Faker::Lorem.sentence,
