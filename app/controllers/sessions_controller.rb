@@ -2,7 +2,11 @@ class SessionsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def new
-    render "new"
+    if request.xhr?
+      render "/sessions/_form", layout: false
+    else
+      render "new"
+    end
   end
 
   def create
