@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
 
   def show
+    ActionCable.server.broadcast 'rooms',
     @question = Question.find(params[:id])
   	@user = User.find(current_user.id)
   end
