@@ -21,7 +21,8 @@ class RegistrationsController < ApplicationController
         redirect_to student_path
       end
     else
-      @message = 'This Email Address Is Already In Use'
+      @messages = @user.errors.full_messages
+      p @messages
       render :'users/new'
     end
   end
@@ -29,7 +30,7 @@ class RegistrationsController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:full_name, :username, :avatar, :email, :is_mentor, :password)
+      params.require(:user).permit(:full_name, :username, :avatar, :email, :is_mentor, :password, :password_confirmation)
     end
 
 

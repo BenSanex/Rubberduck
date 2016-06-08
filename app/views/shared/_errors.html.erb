@@ -1,5 +1,9 @@
-<ul>
-  <% errors.full_messages.each do |message| %>
-    <li> <%= message %></li>
-  <% end %>
-</ul>
+
+<div class='alert alert-danger col-md-4 col-md-offset-5'>
+    <ul>
+      <% messages.each do |message| %>
+        <li> <%= message %></li>
+      <% end %>
+    </ul>
+    <span class="close" data-dismiss="alert">&times;</span>
+  </div>
