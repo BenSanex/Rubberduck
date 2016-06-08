@@ -1,15 +1,19 @@
-
 <header>
   <div id="main-rating">
     <div class="container-fluid">
+      <% if @question.mentor_id != nil %>
+      <h1>How was your session with <%= User.find(@question.mentor_id).username %>?</h1>
+      <% else %>
       <h1>How was your session?</h1>
-      <h3>Please rate your experience below</h3>
+      <% end %>
+      <h4 class="rating-subtag">Please rate your experience below</h4>
 
       <div class="row">
           <div class="col-sm-12">
             <%= render partial: "rating_form", locals: {rating: @rating} %>
           </div>
       </div>
+      <h4>You can also tweet about it!</h4>
       <a href="https://twitter.com/intent/tweet?button_hashtag=Rubberduckapp&text=Another%20problem%20solved%20by" class="twitter-hashtag-button" data-size="large">Tweet #Rubberduckapp</a>
     </div>
   </div>

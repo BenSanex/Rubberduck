@@ -8,7 +8,7 @@
             <hr class="primary">
           </div>
           <div class="col-lg-10 col-lg-offset-1 text-center">
-            <%= form_for(:session, url: login_path, class: "form-horizontal") do |f| %>
+            <%= form_for(:session, html: {class: "form-horizontal"}, url: login_path) do |f| %>
               
               <div class="form-group">
                 <%= f.label :email, class: "col-md-4 control-label" %>
