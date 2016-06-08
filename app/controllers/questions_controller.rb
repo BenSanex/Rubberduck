@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
   def show
     @user = current_user
     if is_user?
+      ActionCable.server.broadcast 'rooms',
       @question = Question.find(params[:id])
     else
       if @user.is_mentor
