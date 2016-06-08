@@ -7,13 +7,16 @@
             <img class="mentor-borders" src="/assets/border_background.png">
             <img id="mentor-portrait" src="<%= @user.avatar %>" alt="">
           </div>
-          
+
           <div class="intro-text">
-            <span class="skills"><%= render partial: "shared/badges", locals: {badges: @badges} %></span>
+            <span class="skills"><%= render partial: "shared/badges", locals: {badges: @badges, user: @user} %></span>
             <span class="name"><%= @user.username %></span>
             <span class="skills">Level: <%= @user.level %></span>
             <span class="skills"><%= render partial: "shared/star_rating", locals: {user: @user} %></span>
-            <a href='#' type='button' class="btn btn-primary" id='skill-adder'>Add New Skill</a>
+            <!-- <%= render @user.skills %> -->
+            <a type="button" class="btn btn-primary btn-lg" id="listen" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Searching">Ready for Action</a>
+            <a href='#' type='button' class="btn btn-primary btn-lg" id='skill-adder'>Add New Skill</a>
+            <span class="skills"><%= render partial: "shared/expertise_form", locals: {expertise: @expertise} %></span>
           </div>
         </div>
       </div>

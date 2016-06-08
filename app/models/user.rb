@@ -1,12 +1,14 @@
 class User < ApplicationRecord
-  	has_secure_password
-	has_many :expertises, foreign_key: :mentor_id
-	has_many :skills, through: :expertises, source: :skill
-	has_many :asked_questions, class_name: "Question", foreign_key: :student_id
-	has_many :answered_questions, class_name: "Question", foreign_key: :mentor_id
-	has_many :mentor_ratings, through: :answered_questions, source: :rating
+  has_secure_password
+  validates_confirmation_of :password
   validates :email, uniqueness: true
   validates :username, uniqueness: true
+
+  has_many :expertises, foreign_key: :mentor_id
+  has_many :skills, through: :expertises, source: :skill
+  has_many :asked_questions, class_name: "Question", foreign_key: :student_id
+  has_many :answered_questions, class_name: "Question", foreign_key: :mentor_id
+  has_many :mentor_ratings, through: :answered_questions, source: :rating
 
 	def rating
 		ratings = self.mentor_ratings.map { |rating| rating.number }
