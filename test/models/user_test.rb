@@ -4,7 +4,6 @@ class UserTest < ActiveSupport::TestCase
 
   def setup
     @karl = User.new(username: 'karl', full_name: 'karl welzein', email: 'karl@gmail.com', avatar: "http://conorlastowka.com/wp-content/uploads/2011/12/karl.jpg")
-
   end
 
   def test_user_has_username
