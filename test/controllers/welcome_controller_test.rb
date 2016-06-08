@@ -6,6 +6,4 @@ class WelcomeControllerTest < ActionController::TestCase
     assert_response :success
     assert_includes @response.body, 'header'
   end
-
-  
 end
