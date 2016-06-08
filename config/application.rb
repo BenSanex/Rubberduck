@@ -1,8 +1,8 @@
 require_relative 'boot'
 
-require "simplecov"
 require "rails"
 # Pick the frameworks you want:
+require "simplecov"
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"

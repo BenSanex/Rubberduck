@@ -6,7 +6,7 @@ require 'rake/testtask'
 Rails.application.load_tasks
 
 
-require 'simplecov'
+
 desc 'Try again.'
 task "db:yolo" => [:"db:drop", :"db:create", :"db:migrate"] do
   puts "YOLO"
