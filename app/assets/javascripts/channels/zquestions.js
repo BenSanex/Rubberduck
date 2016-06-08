@@ -2,6 +2,8 @@ $(document).ready(function(){
   var counter = 0
   $(document).on('click','#listen',function(){
     counter += 1
+    var $this = $(this);
+    $this.button('loading');
     event.preventDefault();
     App.questions = App.cable.subscriptions.create('MessagesChannel', {
       received: function(data) {
