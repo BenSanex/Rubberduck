@@ -22,16 +22,17 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'simplecov', :require => false, :group => :test
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'twitter'
 gem 'omniauth-twitter'
-gem 'simplecov', :require => false, :group => :test
 
 group :test do
   gem 'minitest-rails',  git: 'https://github.com/blowmage/minitest-rails', branch: 'rails5'
   gem 'minitest-spec-rails'
+  gem 'minitest-reporters'
 end
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
