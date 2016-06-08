@@ -3,11 +3,7 @@ class QuestionsController < ApplicationController
 
   def show
     @user = current_user
-    if @user.is_mentor
-      redirect_to mentor_path
-    else
-      redirect_to student_path
-    end
+    @question = Question.find(params[:id])
   end
 
   def create
