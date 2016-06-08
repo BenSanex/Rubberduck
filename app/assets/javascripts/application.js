@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree ./channels
-//= require_tree .
+//= require ./channels/queue
+//= require ./channels/zquestions
+//= require_directory .

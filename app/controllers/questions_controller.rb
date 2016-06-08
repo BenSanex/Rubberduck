@@ -3,15 +3,9 @@ class QuestionsController < ApplicationController
 
   def show
     @user = current_user
-    if is_user?
-      @question = Question.find(params[:id])
-    else
-      if @user.is_mentor
-        redirect_to mentor_path
-      else
-        redirect_to student_path
-      end
-    end
+    @question = Question.find(params[:id])
+    ActionCable.server.broadcast 'rooms',
+      name: @user.username
   end
 
   def create
