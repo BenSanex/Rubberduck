@@ -3,8 +3,8 @@
 
 require_relative 'config/application'
 require 'rake/testtask'
-require 'simplecov'
 Rails.application.load_tasks
+require 'simplecov'
 
 
 desc 'Try again.'
