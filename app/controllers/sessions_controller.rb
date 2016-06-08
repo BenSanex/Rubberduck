@@ -10,8 +10,10 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       if @user.is_mentor
+        session[:mentor] = true
         redirect_to mentor_path
       else
+        session[:mentor] = false
         redirect_to student_path
       end
     else
