@@ -1,12 +1,12 @@
 # Add your own tasks in files placed in lib/tasks ending in .rake,
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-require 'simplecov'
 require_relative 'config/application'
 require 'rake/testtask'
 Rails.application.load_tasks
 
 
+require 'simplecov'
 desc 'Try again.'
 task "db:yolo" => [:"db:drop", :"db:create", :"db:migrate"] do
   puts "YOLO"
