@@ -11,19 +11,19 @@ i {
   transform: scale(1.4);
 }
 
-#myModal {
-  opacity: 1;
-  width: 100%;
-  height: 900px;
-}
-
 #moving-modal {
   margin-top: 200px;
 }
 
+#myModal {
+  top: 150px;
+}
+
 /* Home page */
 #main-button,
-#mentor-button {
+#mentor-button,
+#main-login,
+#mentor-login {
   font-size: 30px;
   margin-left: 27px;
   margin-right: 41px;
@@ -34,12 +34,15 @@ i {
   transition:0s;
 }
 
-#mentor-button {
+#mentor-button,
+#mentor-login {
   padding: 6px 17px;
 }
 
 #main-button:hover,
-#mentor-button:hover {
+#mentor-button:hover,
+#main-login:hover,
+#mentor-login:hover {
   font-size: 0px;
   -o-transition:0s;
   -ms-transition:0s;
@@ -48,14 +51,16 @@ i {
   transition:0s;
 }
 
-#main-button:hover:after {
+#main-button:hover:after,
+#main-login:hover:after {
   content: "Login";
   font-size: 30px;
   padding-left: 21%;
   padding-right: 21%;
 }
 
-#mentor-button:hover:after {
+#mentor-button:hover:after,
+#mentor-login:hover:after {
   content: "Login";
   font-size: 30px;
   padding-left: 19.15%;

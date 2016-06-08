@@ -5,11 +5,11 @@
       <hr>
       <p id="main-subtag">We're creating stronger developers one problem at a time</p>
       <% if @user %>
-        <%= link_to "Students", student_path, class: "btn btn-primary btn-xl page-scroll", id: "main-button" %>
-        <%= link_to "Mentors", mentor_path, class: "btn btn-primary btn-xl page-scroll", id: "mentor-button" %>
+        <%= link_to "Students", student_path, class: "btn btn-primary btn-xl page-scroll", id: "main-login" %>
+        <%= link_to "Mentors", mentor_path, class: "btn btn-primary btn-xl page-scroll", id: "mentor-login" %>
       <% else %>
         <%= link_to "Students", login_path, class: "btn btn-primary btn-xl page-scroll", id: "main-button", html: {'data-toggle' => "modal", 'data-target' => "#myModal"} %>
-        <%= link_to "Mentors", login_path, class: "btn btn-primary btn-xl page-scroll", id: "mentor-button" %>
+        <%= link_to "Mentors", login_path, class: "btn btn-primary btn-xl page-scroll", id: "mentor-button", html: {'data-toggle' => "modal", 'data-target' => "#myModal"} %>
       <% end %>
     </div>
     <div class="header-content-inner">
