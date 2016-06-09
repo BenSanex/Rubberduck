@@ -15,7 +15,7 @@ $(document).ready(function(){
       }
     })
     if (counter >= 2) {
-      locati on.reload();
+      location.reload();
     }
 })
 });
