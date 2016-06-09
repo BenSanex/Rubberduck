@@ -17,7 +17,6 @@ controllers/questions_controller.rb
 ```
 
 ```
-if @question.save
 ActionCable.server.broadcast 'questions',
 content: @question.content,
 title: @question.title,
@@ -55,5 +54,7 @@ Rubberduck uses Codeshare's real-time browser-based collaborative codepad to lin
 This project was created by:
 
 [Ben Sanecki](https://github.com/BenSanex)
+
 [Denny Jovic](https://github.com/DennyJovic)
+
 [Scott Southard](https://github.com/scottsouthard)
