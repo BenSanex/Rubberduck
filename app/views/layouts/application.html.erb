@@ -39,8 +39,11 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li>
+                  <%= link_to "About", about_path, class: "page-scroll" %>
+                </li>
+                <li>
                   <% if logged_in? %>
-                    <%= link_to "Logout", logout_path, action: 'destroy', class: "page-scroll" %>
+                  <%= link_to "Logout", logout_path, action: 'destroy', class: "page-scroll" %>
                   <% end %>
                 </li>
               </ul>
