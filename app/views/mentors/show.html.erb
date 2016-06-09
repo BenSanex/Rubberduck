@@ -14,7 +14,7 @@
             <span class="skills">Level: <%= @user.level %></span>
             <span class="skills"><%= render partial: "shared/star_rating", locals: {user: @user} %></span>
             <!-- <%= render @user.skills %> -->
-            <a type="button" class="btn btn-primary btn-lg" id="listen" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Searching">Ready for Action</a>
+            <a type="button" class="btn btn-primary btn-lg" id="listen" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Searching" data-toggle="tooltip" data-placement="bottom" title="Set Your Status to Available!">Ready for Action</a>
             <a href='#' type='button' class="btn btn-primary btn-lg" id='skill-adder'>Add New Skill</a>
             <span class="skills"><%= render partial: "shared/expertise_form", locals: {expertise: @expertise} %></span>
           </div>

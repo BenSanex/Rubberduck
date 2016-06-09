@@ -12,7 +12,7 @@ $(document).ready(function(){
         $().playSound("http://www.noiseaddicts.com/samples_1w72b820/3724");
       },
       renderMessage: function(data) {
-        return "<div id='myOtherModal' class='modal show fade' tabindex='-1' role='dialog'><div id='moving-modal' class='modal-dialog'><div class='modal-content'><div class='modal-header'><h3 class='modal-title'>You have a Question!</h3></div><div class='modal-body'><h4>Question:"+data.title+"</h4><p>"+data.content+"</p></div><div class='modal-footer'><a class='btn btn-info' href='/mentor/profile'>Cancel</a><a class='btn btn-primary' href='https://rubberduckapp.herokuapp.com/questions/"+data.url+"'>Enter the classroom!</a></div></div></div></div>"
+        return "<div id='myOtherModal' class='modal show fade' tabindex='-1' role='dialog'><div id='moving-modal' class='modal-dialog'><div class='modal-content'><div class='modal-header'><h3 class='modal-title'>You have a Question!</h3></div><div class='modal-body'><h4>Question:"+data.title+"</h4><p>"+data.content+"</p></div><div class='modal-footer'><a class='btn btn-info' href='/mentor/profile'>Cancel</a><a class='btn btn-primary' href='/questions/"+data.url+"'>Enter the classroom!</a></div></div></div></div>"
 
       }
     })

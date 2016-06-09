@@ -19,7 +19,8 @@ class QuestionsController < ApplicationController
         tag: @question.tag,
         url: @question.id
       # head :ok
-      redirect_to "https://rubberduckapp.herokuapp.com/questions/#{@question.id}"
+      redirect_to @question
+      # redirect_to "https://rubberduckapp.herokuapp.com/questions/#{@question.id}"
     end
   end
 
